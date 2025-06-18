@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Element Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .example {
+            background: #f5f5f5;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #007acc;
+        }
+
+        .example h3 {
+            margin-top: 0;
+            color: #007acc;
+        }
+
+        .demo {
+            font-size: 24px;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        code {
+            background: #e8e8e8;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .japanese {
+            font-size: 28px;
+        }
+
+        .chinese {
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML Ruby Element Examples</h1>
+    <p>The <code>&lt;ruby&gt;</code> element represents ruby annotations, commonly used in East Asian typography to show
+        pronunciation or meaning.</p>
+
+    <div class="example">
+        <h3>Basic Ruby Structure</h3>
+        <div class="demo">
+            <ruby>
+                漢字 <rp>(</rp>
+                <rt>かんじ</rt>
+                <rp>)</rp>
+            </ruby>
+        </div>
+        <p><strong>Code:</strong></p>
+        <code>&lt;ruby&gt;漢字 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;かんじ&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;</code>
+        <p><strong>Elements used:</strong></p>
+        <ul>
+            <li><code>&lt;ruby&gt;</code> - Container for the ruby annotation</li>
+            <li><code>&lt;rt&gt;</code> - Ruby text (pronunciation)</li>
+            <li><code>&lt;rp&gt;</code> - Ruby parentheses (fallback for unsupported browsers)</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <h3>Japanese Examples</h3>
+        <div class="demo japanese">
+            <ruby>
+                東京 <rp>(</rp>
+                <rt>とうきょう</rt>
+                <rp>)</rp>
+            </ruby>
+        </div>
+        <p><strong>Code:</strong>
+            <code>&lt;ruby&gt;東京 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;とうきょう&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;</code>
+        </p>
+
+        <div class="demo japanese">
+            <ruby>
+                日本語 <rp>(</rp>
+                <rt>にほんご</rt>
+                <rp>)</rp>
+            </ruby>
+        </div>
+        <p><strong>Code:</strong>
+            <code>&lt;ruby&gt;日本語 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;にほんご&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;</code>
+        </p>
+    </div>
+
+    <div class="example">
+        <h3>Chinese Examples</h3>
+        <div class="demo chinese">
+            <ruby>
+                北京 <rp>(</rp>
+                <rt>Běijīng</rt>
+                <rp>)</rp>
+            </ruby>
+        </div>
+        <p><strong>Code:</strong>
+            <code>&lt;ruby&gt;北京 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Běijīng&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;</code>
+        </p>
+
+        <div class="demo chinese">
+            <ruby>
+                中文 <rp>(</rp>
+                <rt>Zhōngwén</rt>
+                <rp>)</rp>
+            </ruby>
+        </div>
+        <p><strong>Code:</strong>
+            <code>&lt;ruby&gt;中文 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;Zhōngwén&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;</code>
+        </p>
+    </div>
+
+    <div class="example">
+        <h3>Multiple Ruby Annotations</h3>
+        <div class="demo japanese">
+            <ruby>
+                今日 <rp>(</rp>
+                <rt>きょう</rt>
+                <rp>)</rp>
+            </ruby>は
+            <ruby>
+                天気 <rp>(</rp>
+                <rt>てんき</rt>
+                <rp>)</rp>
+            </ruby>がいいです。
+        </div>
+        <p><strong>Code:</strong></p>
+        <code>
+            &lt;ruby&gt;今日 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;きょう&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;は&lt;ruby&gt;天気 &lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;てんき&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;がいいです。
+        </code>
+    </div>
+
+    <div class="example">
+        <h3>Simple Ruby (without rp elements)</h3>
+        <div class="demo">
+            <ruby>
+                HTML <rt>HyperText Markup Language</rt>
+            </ruby>
+        </div>
+        <p><strong>Code:</strong>
+            <code>&lt;ruby&gt;HTML &lt;rt&gt;HyperText Markup Language&lt;/rt&gt;&lt;/ruby&gt;</code>
+        </p>
+        <p><em>Note: Without &lt;rp&gt; elements, browsers that don't support ruby will show the annotation without
+                parentheses.</em></p>
+    </div>
+
+    <div class="example">
+        <h3>Complex Ruby with Multiple Parts</h3>
+        <div class="demo japanese">
+            <ruby>
+                <rb>攻</rb>
+                <rb>殻</rb>
+                <rb>機</rb>
+                <rb>動</rb>
+                <rb>隊</rb>
+                <rp>(</rp>
+                <rt>こう</rt>
+                <rt>かく</rt>
+                <rt>き</rt>
+                <rt>どう</rt>
+                <rt>たい</rt>
+                <rp>)</rp>
+            </ruby>
+        </div>
+        <p><strong>Code:</strong></p>
+        <code>
+            &lt;ruby&gt;<br>
+            &nbsp;&nbsp;&lt;rb&gt;攻&lt;/rb&gt;&lt;rb&gt;殻&lt;/rb&gt;&lt;rb&gt;機&lt;/rb&gt;&lt;rb&gt;動&lt;/rb&gt;&lt;rb&gt;隊&lt;/rb&gt;<br>
+            &nbsp;&nbsp;&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;こう&lt;/rt&gt;&lt;rt&gt;かく&lt;/rt&gt;&lt;rt&gt;き&lt;/rt&gt;&lt;rt&gt;どう&lt;/rt&gt;&lt;rt&gt;たい&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;<br>
+            &lt;/ruby&gt;
+        </code>
+        <p><strong>Additional element:</strong></p>
+        <ul>
+            <li><code>&lt;rb&gt;</code> - Ruby base (the characters being annotated)</li>
+        </ul>
+    </div>
+
+    <div class="example">
+        <h3>Browser Support Note</h3>
+        <p>The <code>&lt;rp&gt;</code> elements provide fallback parentheses for browsers that don't support ruby
+            annotations. In browsers that do support ruby, the <code>&lt;rp&gt;</code> content is hidden and the
+            <code>&lt;rt&gt;</code> content appears above the base text.
+        </p>
+        <p>In browsers without ruby support, you'll see: 漢字(かんじ)</p>
+        <p>In browsers with ruby support, you'll see the pronunciation above the characters.</p>
+    </div>
+</body>
+
+</html>

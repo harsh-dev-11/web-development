@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quote Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .example {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .example h3 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 2px solid #007acc;
+            padding-bottom: 5px;
+        }
+
+        blockquote {
+            background: #f4f4f4;
+            border-left: 4px solid #007acc;
+            margin: 15px 0;
+            padding: 10px 20px;
+            font-style: italic;
+        }
+
+        .code {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        cite {
+            font-style: italic;
+            color: #666;
+        }
+
+        q {
+            quotes: '"' '"' "'" "'";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML Quote Examples</h1>
+
+    <div class="example">
+        <h3>1. Block Quotation without citation</h3>
+        <div class="code">
+            &lt;blockquote&gt;<br>
+            &nbsp;&nbsp;The only way to do great work is to love what you do.<br>
+            &lt;/blockquote&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <blockquote>
+            The only way to do great work is to love what you do.
+        </blockquote>
+
+        <div class="code">
+            &lt;blockquote&gt;<br>
+            &nbsp;&nbsp;In the middle of difficulty lies opportunity.<br>
+            &lt;/blockquote&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <blockquote>
+            In the middle of difficulty lies opportunity.
+        </blockquote>
+
+        <div class="code">
+            &lt;blockquote&gt;<br>
+            &nbsp;&nbsp;Success is not final, failure is not fatal: it is the courage to continue that counts.<br>
+            &lt;/blockquote&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <blockquote>
+            Success is not final, failure is not fatal: it is the courage to continue that counts.
+        </blockquote>
+    </div>
+
+    <div class="example">
+        <h3>2. Block Quotation with citation (Article or a book)</h3>
+        <div class="code">
+            &lt;blockquote cite="https://example.com/article"&gt;<br>
+            &nbsp;&nbsp;The future belongs to those who believe in the beauty of their dreams.<br>
+            &nbsp;&nbsp;&lt;footer&gt;&lt;cite&gt;Eleanor Roosevelt, "You Learn by Living"
+            (1960)&lt;/cite&gt;&lt;/footer&gt;<br>
+            &lt;/blockquote&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <blockquote cite="https://example.com/article">
+            The future belongs to those who believe in the beauty of their dreams.
+            <footer><cite>Eleanor Roosevelt, "You Learn by Living" (1960)</cite></footer>
+        </blockquote>
+
+        <div class="code">
+            &lt;blockquote cite="https://example.com/book"&gt;<br>
+            &nbsp;&nbsp;It is during our darkest moments that we must focus to see the light.<br>
+            &nbsp;&nbsp;&lt;footer&gt;&lt;cite&gt;Aristotle, "Nicomachean Ethics"&lt;/cite&gt;&lt;/footer&gt;<br>
+            &lt;/blockquote&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <blockquote cite="https://example.com/book">
+            It is during our darkest moments that we must focus to see the light.
+            <footer><cite>Aristotle, "Nicomachean Ethics"</cite></footer>
+        </blockquote>
+
+        <div class="code">
+            &lt;blockquote cite="https://example.com/research"&gt;<br>
+            &nbsp;&nbsp;The greatest glory in living lies not in never falling, but in rising every time we fall.<br>
+            &nbsp;&nbsp;&lt;footer&gt;&lt;cite&gt;Nelson Mandela, "Long Walk to Freedom"
+            (1994)&lt;/cite&gt;&lt;/footer&gt;<br>
+            &lt;/blockquote&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <blockquote cite="https://example.com/research">
+            The greatest glory in living lies not in never falling, but in rising every time we fall.
+            <footer><cite>Nelson Mandela, "Long Walk to Freedom" (1994)</cite></footer>
+        </blockquote>
+    </div>
+
+    <div class="example">
+        <h3>3. Inline quotation without citation</h3>
+        <div class="code">
+            &lt;p&gt;As they say, &lt;q&gt;practice makes perfect&lt;/q&gt; when learning new skills.&lt;/p&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <p>As they say, <q>practice makes perfect</q> when learning new skills.</p>
+
+        <div class="code">
+            &lt;p&gt;Remember the old saying &lt;q&gt;better late than never&lt;/q&gt; applies here.&lt;/p&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <p>Remember the old saying <q>better late than never</q> applies here.</p>
+
+        <div class="code">
+            &lt;p&gt;The phrase &lt;q&gt;time is money&lt;/q&gt; has never been more relevant in today's
+            world.&lt;/p&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <p>The phrase <q>time is money</q> has never been more relevant in today's world.</p>
+
+        <div class="code">
+            &lt;p&gt;She always tells her students &lt;q&gt;knowledge is power&lt;/q&gt; before every exam.&lt;/p&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <p>She always tells her students <q>knowledge is power</q> before every exam.</p>
+    </div>
+
+    <div class="example">
+        <h3>4. Inline quotation with cite attribute and cite element</h3>
+        <div class="code">
+            &lt;p&gt;Einstein once said &lt;q cite="https://example.com/einstein-quotes"&gt;Imagination is more
+            important than knowledge&lt;/q&gt; in his famous &lt;cite&gt;Princeton lecture
+            series&lt;/cite&gt;.&lt;/p&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <p>Einstein once said <q cite="https://example.com/einstein-quotes">Imagination is more important than
+                knowledge</q> in his famous <cite>Princeton lecture series</cite>.</p>
+
+        <div class="code">
+            &lt;p&gt;According to &lt;cite&gt;The Art of War&lt;/cite&gt;, Sun Tzu wrote &lt;q
+            cite="https://example.com/art-of-war"&gt;Know yourself and know your enemy&lt;/q&gt;.&lt;/p&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <p>According to <cite>The Art of War</cite>, Sun Tzu wrote <q cite="https://example.com/art-of-war">Know
+                yourself and know your enemy</q>.</p>
+
+        <div class="code">
+            &lt;p&gt;Shakespeare's &lt;cite&gt;Hamlet&lt;/cite&gt; contains the famous line &lt;q
+            cite="https://example.com/hamlet"&gt;To be or not to be, that is the question&lt;/q&gt;.&lt;/p&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <p>Shakespeare's <cite>Hamlet</cite> contains the famous line <q cite="https://example.com/hamlet">To be or not
+                to be, that is the question</q>.</p>
+
+        <div class="code">
+            &lt;p&gt;In &lt;cite&gt;Steve Jobs' Stanford Speech&lt;/cite&gt;, he famously said &lt;q
+            cite="https://example.com/jobs-speech"&gt;Stay hungry, stay foolish&lt;/q&gt;.&lt;/p&gt;
+        </div>
+        <p><strong>Result:</strong></p>
+        <p>In <cite>Steve Jobs' Stanford Speech</cite>, he famously said <q cite="https://example.com/jobs-speech">Stay
+                hungry, stay foolish</q>.</p>
+    </div>
+
+    <div style="margin-top: 40px; padding: 20px; background: #e8f4f8; border-radius: 8px;">
+        <h3>Key Points:</h3>
+        <ul>
+            <li><strong>&lt;blockquote&gt;</strong>: Used for longer quotes that should be displayed as separate blocks
+            </li>
+            <li><strong>&lt;q&gt;</strong>: Used for shorter inline quotes within sentences</li>
+            <li><strong>cite attribute</strong>: Provides the URL source of the quote (not visible to users)</li>
+            <li><strong>&lt;cite&gt;</strong> element: Used to reference the title of works, authors, or sources
+                (visible to users)</li>
+            <li><strong>&lt;footer&gt;</strong>: Often used within blockquotes to contain citation information</li>
+        </ul>
+    </div>
+</body>
+
+</html>
