@@ -1,0 +1,72 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Catalog</title>
+</head>
+
+<body>
+  <h1>Book Catalogue</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Publication Year</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Object Oriented Programming in C++ 8e</td>
+        <td>E Balagurusamy</td>
+        <td>programming</td>
+        <td>2024</td>
+      </tr>
+
+      <tr>
+        <td>Think and Grow Rich</td>
+        <td>Napoleon Hill</td>
+        <td>self-help</td>
+        <td>2020</td>
+      </tr>
+
+      <tr>
+        <td>Atomic Habits</td>
+        <td>James Clear</td>
+        <td>self-help</td>
+        <td>2018</td>
+      </tr>
+
+      <tr>
+        <td>Rich Dad Poor Dad</td>
+        <td>Robert T. Kiyosaki</td>
+        <td>self-help</td>
+        <td>1997</td>
+      </tr>
+
+      <tr>
+        <td>Cup of Gold</td>
+        <td>John Steinback</td>
+        <td>Historical Fiction</td>
+        <td>1929</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="4">Total Books: 5</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>
+
+** end of index.html **
+

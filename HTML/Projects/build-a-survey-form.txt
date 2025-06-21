@@ -1,0 +1,64 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thanks for taking the time and helping us to build the platform more better.</p>
+
+    <form id="survey-form">
+      <label for="name" id="name-label">Name: </label>
+      <input id="name" type="text" placeholder="Enter name" required> <br>
+
+      <label for="email" id="email-label">Email:</label>
+      <input type="email" id="email" required placeholder="enter email"><br>
+
+      <label for="number" id="number-label">Age: </label>
+      <input type="number" id="number" min="13" max="100" placeholder="your age"><br><br>
+
+      <label for="dropdown">Which option best describes your current role?
+
+</label>
+    <select id="dropdown">
+      <option selected disabled >Enter your role</option>
+      <option value="student" >Student</option>
+      <option value="fulltime-job" >Fulltime Job</option>
+    </select>
+
+    <p>Would you recommend free code camp to your friend?</p>
+    <label for="yes">yes</label>
+    <input type="radio" id="yes" name="choice" value="yes">
+    <label for="no">no</label>
+    <input type="radio" id="no" name="choice" value="no"> <br>
+
+
+    <p>
+      What are the best things that your like
+    </p>
+    <label for="dsa">DSA
+    </label>
+    <input type="checkbox" id="dsa" value="dsa">
+    <label for="WebDev">Web Development
+    </label>
+    <input type="checkbox" id="WebDev" value="WebDev">
+    <label for="programming">programming
+    </label>
+    <input type="checkbox" id="programming" value="programming"><br><br>
+
+    <label for="comment">Leave Comment</label><br>
+    <textarea id="comment" >
+
+    </textarea><br>
+
+    <input type="submit" id="submit">
+    </form>
+  </body>
+</html>
+
+** end of index.html **
+
