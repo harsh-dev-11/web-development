@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators - Complete Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #34495e);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .combinator-section {
+            margin: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .combinator-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 5px solid;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+        }
+
+        .code-display {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+            border-left: 4px solid #4a90e2;
+        }
+
+        /* 1. DESCENDANT COMBINATOR (space) */
+        .descendant-demo {
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            border: 2px solid #e17055;
+        }
+
+        .descendant-demo .section-title {
+            border-left-color: #e17055;
+            color: #2d3436;
+        }
+
+        .descendant-demo .container div {
+            background: #ff7675;
+            color: white;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* 2. CHILD COMBINATOR (>) */
+        .child-demo {
+            background: linear-gradient(45deg, #a8e6cf, #88d8c0);
+            border: 2px solid #00b894;
+        }
+
+        .child-demo .section-title {
+            border-left-color: #00b894;
+            color: #2d3436;
+        }
+
+        .child-demo .container>p {
+            background: #00b894;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 3px solid #00a085;
+        }
+
+        .child-demo .nested p {
+            background: #ddd;
+            color: #333;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        /* 3. ADJACENT SIBLING COMBINATOR (+) */
+        .adjacent-demo {
+            background: linear-gradient(45deg, #ffd3a5, #fd8853);
+            border: 2px solid #e84393;
+        }
+
+        .adjacent-demo .section-title {
+            border-left-color: #e84393;
+            color: #2d3436;
+        }
+
+        .adjacent-demo h2+p {
+            background: #e84393;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-left: 5px solid #d63384;
+        }
+
+        /* 4. GENERAL SIBLING COMBINATOR (~) */
+        .sibling-demo {
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            border: 2px solid #6c5ce7;
+        }
+
+        .sibling-demo .section-title {
+            border-left-color: #6c5ce7;
+            color: #2d3436;
+        }
+
+        .sibling-demo .trigger~.target {
+            background: #6c5ce7;
+            color: white;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            transform: translateX(20px);
+            border-left: 4px solid #5f3dc4;
+        }
+
+        .sibling-demo .not-target {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px dashed #ccc;
+            border-radius: 5px;
+        }
+
+        /* Interactive Demo Styles */
+        .interactive-demo {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: 2px solid #5a67d8;
+        }
+
+        .interactive-demo .section-title {
+            border-left-color: #fff;
+            color: white;
+        }
+
+        .tree-structure {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .tree-item {
+            padding: 8px 15px;
+            margin: 5px 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            border-left: 3px solid #fff;
+            transition: all 0.3s ease;
+        }
+
+        .tree-item:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateX(10px);
+        }
+
+        .level-1 {
+            margin-left: 0;
+        }
+
+        .level-2 {
+            margin-left: 30px;
+        }
+
+        .level-3 {
+            margin-left: 60px;
+        }
+
+        /* Explanation boxes */
+        .explanation {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .highlight {
+            background: yellow;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                margin: 10px;
+            }
+
+            .combinator-section {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>🎨 CSS Combinators Masterclass</h1>
+            <p>Learn how to target elements with precision using CSS combinators</p>
+        </div>
+
+        <!-- 1. DESCENDANT COMBINATOR -->
+        <div class="combinator-section descendant-demo">
+            <h2 class="section-title">1. Descendant Combinator (Space)</h2>
+            <div class="explanation">
+                <strong>Syntax:</strong> <code>ancestor descendant</code><br>
+                <strong>Targets:</strong> ALL descendants (children, grandchildren, etc.) of the ancestor element
+            </div>
+
+            <div class="code-display">.container div { background: #ff7675; }</div>
+
+            <div class="container">
+                <div>✅ Direct child div - STYLED</div>
+                <section>
+                    <div>✅ Nested div inside section - STYLED</div>
+                    <article>
+                        <div>✅ Deeply nested div - STYLED</div>
+                    </article>
+                </section>
+                <p>❌ Paragraph - NOT STYLED</p>
+            </div>
+        </div>
+
+        <!-- 2. CHILD COMBINATOR -->
+        <div class="combinator-section child-demo">
+            <h2 class="section-title">2. Child Combinator (>)</h2>
+            <div class="explanation">
+                <strong>Syntax:</strong> <code>parent > child</code><br>
+                <strong>Targets:</strong> ONLY direct children, not deeper descendants
+            </div>
+
+            <div class="code-display">.container > p { background: #00b894; }</div>
+
+            <div class="container">
+                <p>✅ Direct child paragraph - STYLED</p>
+                <p>✅ Another direct child paragraph - STYLED</p>
+                <div class="nested">
+                    <p>❌ Nested paragraph - NOT STYLED (not direct child)</p>
+                    <div>
+                        <p>❌ Deeply nested paragraph - NOT STYLED</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. ADJACENT SIBLING COMBINATOR -->
+        <div class="combinator-section adjacent-demo">
+            <h2 class="section-title">3. Adjacent Sibling Combinator (+)</h2>
+            <div class="explanation">
+                <strong>Syntax:</strong> <code>element + next-sibling</code><br>
+                <strong>Targets:</strong> The FIRST sibling element that immediately follows
+            </div>
+
+            <div class="code-display">h2 + p { background: #e84393; }</div>
+
+            <div class="container">
+                <h2>🎯 This heading triggers the style</h2>
+                <p>✅ This paragraph immediately follows h2 - STYLED</p>
+                <p>❌ This paragraph doesn't immediately follow h2 - NOT STYLED</p>
+                <h2>🎯 Another heading</h2>
+                <div>❌ This div follows h2, not p - NOT STYLED</div>
+                <p>❌ This p doesn't immediately follow h2 - NOT STYLED</p>
+                <h2>🎯 Third heading</h2>
+                <p>✅ Again, immediate sibling paragraph - STYLED</p>
+            </div>
+        </div>
+
+        <!-- 4. GENERAL SIBLING COMBINATOR -->
+        <div class="combinator-section sibling-demo">
+            <h2 class="section-title">4. General Sibling Combinator (~)</h2>
+            <div class="explanation">
+                <strong>Syntax:</strong> <code>element ~ sibling</code><br>
+                <strong>Targets:</strong> ALL following siblings of the same type (not just the first one)
+            </div>
+
+            <div class="code-display">.trigger ~ .target { background: #6c5ce7; }</div>
+
+            <div class="container">
+                <div class="not-target">❌ Before trigger - NOT STYLED</div>
+                <div class="trigger">🎯 TRIGGER ELEMENT</div>
+                <div class="target">✅ First target after trigger - STYLED</div>
+                <div class="not-target">❌ Not a target class - NOT STYLED</div>
+                <div class="target">✅ Second target after trigger - STYLED</div>
+                <p>❌ Different element type - NOT STYLED</p>
+                <div class="target">✅ Third target after trigger - STYLED</div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE DEMO -->
+        <div class="combinator-section interactive-demo">
+            <h2 class="section-title">🚀 Interactive HTML Tree Structure</h2>
+            <div class="explanation" style="background: rgba(255,255,255,0.1); border-left-color: white; color: white;">
+                <strong>Hover over elements below to see the relationships!</strong><br>
+                This demonstrates how combinators work in a real HTML structure.
+            </div>
+
+            <div class="tree-structure">
+                <div class="tree-item level-1">🏠 .main-container (parent)</div>
+                <div class="tree-item level-2">📄 header (child of main-container)</div>
+                <div class="tree-item level-3">📝 h1 (child of header)</div>
+                <div class="tree-item level-3">📝 p (sibling of h1)</div>
+                <div class="tree-item level-2">📦 .content (sibling of header)</div>
+                <div class="tree-item level-3">📝 article (child of content)</div>
+                <div class="tree-item level-3">📝 aside (sibling of article)</div>
+                <div class="tree-item level-2">🦶 footer (sibling of content)</div>
+            </div>
+
+            <div class="code-display">
+                /* Examples based on above structure */
+                .main-container p → Targets ALL p elements inside main-container
+                .main-container > header → Targets ONLY direct header child
+                header + .content → Targets .content immediately after header
+                header ~ footer → Targets footer that's a sibling of header
+            </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="combinator-section" style="background: linear-gradient(45deg, #2c3e50, #34495e); color: white;">
+            <h2 class="section-title" style="color: white; border-left-color: #fff;">📚 Quick Reference Summary</h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                    <h3>🌳 Descendant (space)</h3>
+                    <code>.parent .child</code>
+                    <p>Selects ALL nested elements</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                    <h3>👶 Child (>)</h3>
+                    <code>.parent > .child</code>
+                    <p>Selects DIRECT children only</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                    <h3>👯 Adjacent Sibling (+)</h3>
+                    <code>.first + .second</code>
+                    <p>Selects NEXT sibling only</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px;">
+                    <h3>👨‍👩‍👧‍👦 General Sibling (~)</h3>
+                    <code>.first ~ .others</code>
+                    <p>Selects ALL following siblings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
