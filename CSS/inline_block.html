@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Inline-Block - Complete Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #2c3e50, #34495e);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .demo-section {
+            margin: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .demo-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 5px solid;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 5px;
+        }
+
+        .code-display {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+            overflow-x: auto;
+            border-left: 4px solid #4a90e2;
+        }
+
+        .explanation {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .demo-container {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border: 2px dashed #ccc;
+            min-height: 150px;
+        }
+
+        /* ORIGINAL DEMO RECREATION */
+        .original-demo {
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            border: 2px solid #e91e63;
+        }
+
+        .original-demo .section-title {
+            border-left-color: #e91e63;
+            color: #2d3436;
+        }
+
+        .original-demo .first {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            display: inline-block;
+            margin: 5px;
+            border-radius: 8px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .original-demo .second {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(0, 17, 255);
+            display: inline-block;
+            margin: 5px;
+            border-radius: 8px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .original-demo .first:hover,
+        .original-demo .second:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .original-demo .first::after {
+            content: 'Red Box';
+            position: absolute;
+            top: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 0, 0, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .original-demo .second::after {
+            content: 'Blue Box';
+            position: absolute;
+            top: 110px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 17, 255, 0.8);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* DISPLAY COMPARISON DEMO */
+        .comparison-demo {
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            border: 2px solid #00b894;
+        }
+
+        .comparison-demo .section-title {
+            border-left-color: #00b894;
+            color: #2d3436;
+        }
+
+        .comparison-item {
+            margin: 20px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #00b894;
+        }
+
+        .comparison-item h4 {
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+
+        /* Block elements */
+        .block-demo .demo-box {
+            width: 100px;
+            height: 50px;
+            background: #ff7675;
+            margin: 5px 0;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Inline elements */
+        .inline-demo .demo-box {
+            background: #74b9ff;
+            padding: 10px 15px;
+            display: inline;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        /* Inline-block elements */
+        .inline-block-demo .demo-box {
+            width: 100px;
+            height: 50px;
+            background: #00b894;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 5px;
+            vertical-align: top;
+        }
+
+        /* PRACTICAL EXAMPLES */
+        .practical-demo {
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            border: 2px solid #e17055;
+        }
+
+        .practical-demo .section-title {
+            border-left-color: #e17055;
+            color: #2d3436;
+        }
+
+        /* Navigation menu example */
+        .nav-demo {
+            background: #2d3436;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .nav-demo .nav-item {
+            display: inline-block;
+            background: #00b894;
+            color: white;
+            padding: 12px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-demo .nav-item:hover {
+            background: #00a085;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+        }
+
+        /* Card layout example */
+        .card-demo {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .card {
+            display: inline-block;
+            width: 200px;
+            height: 250px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            margin: 10px;
+            border-radius: 10px;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            vertical-align: top;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+        /* INTERACTIVE PLAYGROUND */
+        .playground-demo {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: 2px solid #5a67d8;
+        }
+
+        .playground-demo .section-title {
+            border-left-color: #fff;
+            color: white;
+        }
+
+        .controls {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        .control-group {
+            margin: 15px 0;
+        }
+
+        .control-group label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+        }
+
+        .control-group select,
+        .control-group input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        .playground-box {
+            width: 80px;
+            height: 80px;
+            background: #e84393;
+            margin: 10px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-align: center;
+            line-height: 80px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .playground-box:hover {
+            background: #d63384;
+            transform: scale(1.1);
+        }
+
+        /* Summary section */
+        .summary-demo {
+            background: linear-gradient(45deg, #2c3e50, #34495e);
+            color: white;
+            border: 2px solid #34495e;
+        }
+
+        .summary-demo .section-title {
+            color: white;
+            border-left-color: #fff;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                margin: 10px;
+            }
+
+            .demo-section {
+                margin: 15px;
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .card {
+                width: 150px;
+                height: 200px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1>🎨 CSS Display: Inline-Block Masterclass</h1>
+            <p>Master the power of inline-block display with interactive examples</p>
+        </div>
+
+        <!-- ORIGINAL DEMO ENHANCED -->
+        <div class="demo-section original-demo">
+            <h2 class="section-title">🎯 Your Original Demo - Enhanced!</h2>
+            <div class="explanation">
+                <strong>Your original code created two boxes side by side using `display: inline-block`</strong><br>
+                I've enhanced it with hover effects, labels, and better styling while keeping the core concept intact.
+            </div>
+
+            <div class="code-display">
+                .first, .second {
+                height: 100px;
+                width: 100px;
+                display: inline-block; /* Key property! */
+                margin: 5px;
+                border-radius: 8px;
+                }
+
+                .first { background-color: red; }
+                .second { background-color: rgb(0, 17, 255); }
+            </div>
+
+            <div class="demo-container">
+                <div class="first"></div>
+                <div class="second"></div>
+                <p style="margin-top: 20px; text-align: center; color: #666;">
+                    ✨ Hover over the boxes to see the enhanced effects!
+                </p>
+            </div>
+        </div>
+
+        <!-- DISPLAY COMPARISON -->
+        <div class="demo-section comparison-demo">
+            <h2 class="section-title">📊 Display Property Comparison</h2>
+            <div class="explanation">
+                Understanding the difference between <strong>block</strong>, <strong>inline</strong>, and
+                <strong>inline-block</strong> is crucial for CSS layout mastery.
+            </div>
+
+            <div class="comparison-item">
+                <h4>🧱 Display: Block</h4>
+                <div class="code-display">display: block; /* Takes full width, stacks vertically */</div>
+                <div class="demo-container block-demo">
+                    <div class="demo-box">Box 1</div>
+                    <div class="demo-box">Box 2</div>
+                    <div class="demo-box">Box 3</div>
+                </div>
+            </div>
+
+            <div class="comparison-item">
+                <h4>📝 Display: Inline</h4>
+                <div class="code-display">display: inline; /* Flows with text, no width/height control */</div>
+                <div class="demo-container inline-demo">
+                    <span class="demo-box">Inline 1</span>
+                    <span class="demo-box">Inline 2</span>
+                    <span class="demo-box">Inline 3</span>
+                </div>
+            </div>
+
+            <div class="comparison-item">
+                <h4>🎯 Display: Inline-Block (Best of Both!)</h4>
+                <div class="code-display">display: inline-block; /* Flows horizontally + width/height control */</div>
+                <div class="demo-container inline-block-demo">
+                    <div class="demo-box">IB 1</div>
+                    <div class="demo-box">IB 2</div>
+                    <div class="demo-box">IB 3</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRACTICAL EXAMPLES -->
+        <div class="demo-section practical-demo">
+            <h2 class="section-title">🚀 Real-World Applications</h2>
+            <div class="explanation">
+                See how <strong>inline-block</strong> is used in real web development scenarios.
+            </div>
+
+            <h3 style="margin: 20px 0 10px 0;">🧭 Navigation Menu</h3>
+            <div class="code-display">
+                .nav-item {
+                display: inline-block;
+                padding: 12px 20px;
+                margin: 5px;
+                /* Perfect for horizontal navigation! */
+                }
+            </div>
+            <div class="nav-demo">
+                <div class="nav-item">Home</div>
+                <div class="nav-item">About</div>
+                <div class="nav-item">Services</div>
+                <div class="nav-item">Portfolio</div>
+                <div class="nav-item">Contact</div>
+            </div>
+
+            <h3 style="margin: 20px 0 10px 0;">🃏 Card Layout</h3>
+            <div class="code-display">
+                .card {
+                display: inline-block;
+                width: 200px;
+                height: 250px;
+                vertical-align: top; /* Align cards to top */
+                }
+            </div>
+            <div class="card-demo">
+                <div class="card">
+                    <h3>🎨 Design</h3>
+                    <p>Beautiful, modern designs that capture your brand's essence and engage your audience.</p>
+                </div>
+                <div class="card">
+                    <h3>💻 Development</h3>
+                    <p>Cutting-edge web development using the latest technologies and best practices.</p>
+                </div>
+                <div class="card">
+                    <h3>📱 Mobile</h3>
+                    <p>Responsive designs that work perfectly on all devices and screen sizes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTERACTIVE PLAYGROUND -->
+        <div class="demo-section playground-demo">
+            <h2 class="section-title">🎮 Interactive Playground</h2>
+            <div class="explanation" style="background: rgba(255,255,255,0.1); border-left-color: white; color: white;">
+                <strong>Experiment with different inline-block properties!</strong><br>
+                Change the values below to see how they affect the layout in real-time.
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label>Display:</label>
+                    <select id="displaySelect" onchange="updatePlayground()">
+                        <option value="inline-block">inline-block</option>
+                        <option value="block">block</option>
+                        <option value="inline">inline</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label>Width:</label>
+                    <input type="range" id="widthRange" min="50" max="200" value="80" onchange="updatePlayground()">
+                    <span id="widthValue">80px</span>
+                </div>
+
+                <div class="control-group">
+                    <label>Height:</label>
+                    <input type="range" id="heightRange" min="50" max="200" value="80" onchange="updatePlayground()">
+                    <span id="heightValue">80px</span>
+                </div>
+
+                <div class="control-group">
+                    <label>Margin:</label>
+                    <input type="range" id="marginRange" min="0" max="30" value="10" onchange="updatePlayground()">
+                    <span id="marginValue">10px</span>
+                </div>
+            </div>
+
+            <div class="demo-container" style="background: rgba(255,255,255,0.1);">
+                <div class="playground-box" id="box1">1</div>
+                <div class="playground-box" id="box2">2</div>
+                <div class="playground-box" id="box3">3</div>
+                <div class="playground-box" id="box4">4</div>
+            </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="demo-section summary-demo">
+            <h2 class="section-title">📚 Key Takeaways</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Perfect Balance</h3>
+                    <p>Combines the flow of inline elements with the sizing control of block elements</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📏</div>
+                    <h3>Width & Height</h3>
+                    <p>You can set specific dimensions, unlike pure inline elements</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Horizontal Flow</h3>
+                    <p>Elements sit side by side instead of stacking vertically</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Layout Flexibility</h3>
+                    <p>Ideal for navigation menus, image galleries, and card layouts</p>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 10px; margin-top: 30px;">
+                <h3 style="text-align: center; margin-bottom: 15px;">✨ When to Use Inline-Block</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                    <div>✅ Navigation menus</div>
+                    <div>✅ Image galleries</div>
+                    <div>✅ Button groups</div>
+                    <div>✅ Card layouts</div>
+                    <div>✅ Form elements side by side</div>
+                    <div>✅ Social media icons</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updatePlayground() {
+            const display = document.getElementById('displaySelect').value;
+            const width = document.getElementById('widthRange').value;
+            const height = document.getElementById('heightRange').value;
+            const margin = document.getElementById('marginRange').value;
+
+            document.getElementById('widthValue').textContent = width + 'px';
+            document.getElementById('heightValue').textContent = height + 'px';
+            document.getElementById('marginValue').textContent = margin + 'px';
+
+            const boxes = document.querySelectorAll('.playground-box');
+            boxes.forEach(box => {
+                box.style.display = display;
+                box.style.width = width + 'px';
+                box.style.height = height + 'px';
+                box.style.margin = margin + 'px';
+                box.style.lineHeight = height + 'px';
+            });
+        }
+
+        // Initialize playground
+        updatePlayground();
+    </script>
+</body>
+
+</html>
