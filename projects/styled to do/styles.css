@@ -1,0 +1,63 @@
+body {
+    background-color: #FFFDF6;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.main {
+    width: 500px;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 30px;
+    background: #FAF6E9;
+    padding: 20px 0;
+}
+
+.todo-list {
+    list-style-position: inside;
+    list-style: none;
+}
+
+.todo-list>li {
+    font-size: 17px;
+    width: 80%;
+    line-height: 2;
+    padding: 10px;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    /* border: 2px solid black; */
+    text-align: left;
+    background-color: #DDEB9D;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:focus {
+    outline: #DDEB9D;
+    color: blue;
+}
+
+a:hover {
+    color: rgb(207, 178, 104);
+}
+
+a:active {
+    color: darkgoldenrod;
+}
+
+h1 {
+    color: rgb(54, 54, 54);
+    text-align: center;
+}
