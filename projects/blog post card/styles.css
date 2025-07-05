@@ -1,0 +1,43 @@
+body {
+    background-color: aliceblue;
+}
+
+.blog-post-card {
+    background-color: white;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-img {
+    width: 100%;
+    border-bottom: 5px solid rgb(11, 16, 11);
+}
+
+.post-content {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    padding: 20px;
+}
+
+.post-title,
+.post-excerpt {
+    margin: 10px;
+    color: rgb(22, 37, 22);
+}
+
+.read-more {
+    display: inline-block;
+    color: white;
+    background-color: rgb(15, 24, 15);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    background-color: chocolate;
+}
