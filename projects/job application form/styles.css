@@ -1,0 +1,84 @@
+body {
+    background-color: rgb(234, 244, 213);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: #fcf1e5;
+    max-width: 50vw;
+    margin: 10px auto 10px auto;
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.container form {
+    /* border: 2px solid blue; */
+
+    max-width: 80%;
+    margin: 10px auto 10px auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+form label,
+input {
+    margin: 10px;
+    /* padding: 10px; */
+    font-size: large;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid orangered;
+}
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+    border: 2px solid red;
+}
+
+input:valid,
+textarea:valid,
+select:valid {
+    border: 2px solid green;
+}
+
+button {
+    display: block;
+    padding: 10px;
+    max-width: 70px;
+    margin: auto auto auto auto;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+.radio-group>input[type="radio"]:checked {
+    border: 2px solid blueviolet;
+    background-color: lightgreen;
+}
+
+.radio-group label {
+    color: red;
+}
+
+input[type="radio"]:checked+label {
+    color: green;
+    font-weight: bold;
+}
+
+input:first-of-type {
+    border-radius: 5px;
+}
+
+select {
+    margin-left: 40px;
+    padding: 7px;
+}
