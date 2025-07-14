@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Pseudo Class</title>
+    <style>
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        ul li {
+            font-size: 1.3rem;
+        }
+
+
+        nav {
+            display: block;
+            width: 30%;
+            margin: 10vh auto 5vh auto;
+            padding: 20px;
+        }
+
+        a {
+            padding: 20px;
+            text-decoration: none;
+            font-size: large;
+        }
+
+        section:target {
+            background-color: lightgreen;
+            padding: 20px;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#section1">Introduction</a>
+        <a href="#section2">Features</a>
+    </nav>
+
+    <section id="section1">
+        <h2>Introduction</h2>
+        <p>With the help of Pseudo Classes, we can style the elements depending on <br>
+            their state and position</p>
+    </section>
+
+    <section id="section2">
+        <h2>Features of Pseudo Classes</h2>
+        <p>Pseudo classes are of different types.</p>
+        <ul>
+            <li>link</li>
+            <li>visited</li>
+            <li>any-link</li>
+            <li>target</li>
+        </ul>
+    </section>
+</body>
+
+</html>
