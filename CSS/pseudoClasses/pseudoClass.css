@@ -25,27 +25,30 @@ h1 {
 }
 
 .container>button {
-    width: 200px;
+    width: 150px;
     height: 50px;
     font-size: 20px;
     display: block;
     margin-top: calc(100vh - 90vh);
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(89, 53, 18);
+    background-color: rgb(241, 218, 88);
     color: rgb(220, 225, 220);
-    border: 3px solid rgb(27, 213, 61);
+    border: 3px solid rgb(174, 79, 195);
+    border-radius: 10px;
 }
 
 button:hover {
-    background-color: rgb(20, 143, 151);
+    background-color: rgb(46, 232, 161);
     border: none;
+    transition: 0.9s ease;
 }
 
 button:active {
-    color: white;
-    background-color: black;
-    border: 4px solid tomato;
+    color: rgb(7, 4, 36);
+    background-color: rgb(121, 233, 241);
+    border: 2px solid gray;
+    transition: 0.2s ease;
 }
 
 /* button:focus {
@@ -109,8 +112,9 @@ form {
 
 
 a:any-link {
-    color: crimson;
-    background-color: rgb(163, 164, 159);
+    color: black;
+    /* background-color: rgb(163, 164, 159); */
+    text-decoration: none;
 }
 
 /* a:visited {
