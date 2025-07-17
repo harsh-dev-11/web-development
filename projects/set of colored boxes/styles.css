@@ -1,0 +1,37 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.color-grid {
+    padding: 100px;
+
+}
+
+.color-box {
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    margin-right: 70px;
+}
+
+.color1 {
+    background-color: #1d794e;
+}
+
+.color2 {
+    background-color: rgb(178, 195, 56);
+}
+
+.color3 {
+    background-color: hotpink;
+}
+
+.color4 {
+    background-color: hsl(240deg, 100%, 70%);
+}
+
+.color5 {
+    background-color: rgb(231, 5, 61);
+}
