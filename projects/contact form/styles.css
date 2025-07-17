@@ -1,0 +1,74 @@
+body {
+    background: linear-gradient(to right, rgb(178, 214, 255), rgb(170, 255, 248));
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container {
+    background-color: rgba(253, 253, 252, 0.689);
+    border-radius: 10px;
+    min-width: 200px;
+    max-width: 300px;
+    width: 50vw;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8em;
+    color: rgba(33, 33, 33, 0.842);
+}
+
+label {
+    display: block;
+    margin: auto auto;
+    text-align: center;
+    color: rgb(71, 71, 71);
+}
+
+input {
+    margin: 3px auto;
+    width: 90%;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.121);
+    border-radius: 5px;
+}
+
+input:hover {
+    background-color: rgb(248, 253, 253);
+    transition: 0.2s ease;
+    outline: 2px;
+}
+
+textarea {
+    line-height: 1.8rem;
+    width: 90%;
+    margin: 3px auto;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.121);
+    border-radius: 5px;
+}
+
+textarea:hover {
+    background-color: rgb(248, 253, 253);
+    transition: 0.2s ease;
+    outline: 2px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    background-color: rgb(54, 173, 54);
+    width: 30%;
+    border: none;
+    padding: 0.2em;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(30, 120, 30, 0.888);
+    transition: 0.8s ease;
+}
