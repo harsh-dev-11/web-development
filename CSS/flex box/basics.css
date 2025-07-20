@@ -1,0 +1,35 @@
+body {
+    background-color: #383838;
+}
+
+.container {
+    background-color: rgba(223, 234, 255, 0.607);
+    height: 200px;
+    width: 600px;
+    border: 2px solid red;
+
+    display: flex;
+    /* flex-direction: row; */
+    /* flex-flow: flex-start nowrap; */
+    align-items: center;
+    justify-content: space-around;
+    /* align-items: stretch; */
+}
+
+.container div {
+    height: 40px;
+    width: 80px;
+    border: 1px solid rgb(45, 45, 75);
+}
+
+#first-div {
+    background-color: lightpink;
+}
+
+#second-div {
+    background-color: lightseagreen;
+}
+
+#third-div {
+    background-color: lightyellow;
+}
