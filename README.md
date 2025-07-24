@@ -2,7 +2,7 @@
 
 Welcome to the core web workspace.
 
-Currently following the MERN stack and documenting each step with code, 
+Currently following the MERN stack and documenting each tech-stack with code and projects.
 ---
 
 ## 📦 What's Inside?
