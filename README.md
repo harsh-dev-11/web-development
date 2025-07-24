@@ -15,7 +15,7 @@ Expect to find structured modules and practice work across the following technol
 <!-- -  **Front-end Libraries** *(upcoming)*
 -  **Python for Web** *(upcoming)*
 -  **Relational Databases (MySQL, PostgreSQL)** *(upcoming)* -->
--  **Backend with JavaScript (Node.js, Express.js)** *(upcoming)*
+<!-- -  **Backend with JavaScript (Node.js, Express.js)** *(upcoming)* -->
 
 <!-- > **Note:** This repository is actively growing — updates and new content are frequent. -->
 
