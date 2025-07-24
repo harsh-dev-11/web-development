@@ -1,24 +1,23 @@
 # 🌐 WEB DEVELOPMENT CORE
 
-Welcome to the central hub of my web development journey — a living archive of concepts, code, and creativity.
+Welcome to the core web workspace.
 
-Currently exploring the MERN stack and documenting each step with code, mini-projects, and notes!
-
+Currently following the MERN stack and documenting each step with code, 
 ---
 
 ## 📦 What's Inside?
 
 Expect to find structured modules and practice work across the following technologies:
 
-- ✅ **HTML** *(completed)*
-- ⏳ **CSS** *(in progress)*
-- 🔜 **JavaScript** *(starting soon)*
-- 🔧 **Front-end Libraries** *(upcoming)*
-- 🐍 **Python for Web** *(upcoming)*
-- 🗃️ **Relational Databases (MySQL, PostgreSQL)** *(upcoming)*
-- 🖥️ **Backend with JavaScript (Node.js, Express.js)** *(upcoming)*
+-  **HTML** 
+-  **CSS** *(in progress)*
+-  **JavaScript** *(upcoming)*
+<!-- -  **Front-end Libraries** *(upcoming)*
+-  **Python for Web** *(upcoming)*
+-  **Relational Databases (MySQL, PostgreSQL)** *(upcoming)* -->
+-  **Backend with JavaScript (Node.js, Express.js)** *(upcoming)*
 
-> **Note:** This repository is actively growing — updates and new content are frequent.
+<!-- > **Note:** This repository is actively growing — updates and new content are frequent. -->
 
 ---
 
@@ -28,11 +27,6 @@ Expect to find structured modules and practice work across the following technol
 web-development/
 ├── HTML/
 ├── CSS/
-├── JavaScript/
-├── Frontend-Libraries/
-├── Python-Web/
-├── Databases/
-├── Backend-JS/
 ├── Projects/
-├── Notes/
+├── docs/
 └── README.md
