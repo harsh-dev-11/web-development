@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Positioning Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .section {
+      height: 1200px;
+      padding: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    .relative-container {
+      position: relative;
+      background-color: #f9f9f9;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ffcccb;
+      padding: 10px;
+    }
+
+    .fixed-box {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #add8e6;
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    .sticky-box {
+      position: sticky;
+      top: 0;
+      background: #90ee90;
+      padding: 10px;
+      border: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed element -->
+  <div class="fixed-box">Fixed Box (Always visible)</div>
+
+  <!-- Absolute positioning example -->
+  <div class="section">
+    <h2>Absolute Positioning</h2>
+    <div class="relative-container">
+      <p>This is a relatively positioned container.</p>
+      <div class="absolute-box">Absolute Box (Top-right)</div>
+    </div>
+    <p>Scroll down to see how absolute box moves with content.</p>
+  </div>
+
+  <!-- Sticky positioning example -->
+  <div class="section">
+    <h2 class="sticky-box">Sticky Header (Sticks on scroll)</h2>
+    <p>Scroll to see the sticky box stay at the top once it reaches it.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in varius nulla. Nullam commodo orci id diam bibendum, at scelerisque arcu laoreet.</p>
+    <p>...</p>
+  </div>
+
+  <div class="section">
+    <h2>End of Page</h2>
+    <p>This is the final section to demonstrate scrolling.</p>
+  </div>
+
+</body>
+</html>
