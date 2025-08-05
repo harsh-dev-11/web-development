@@ -1,24 +1,131 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    background: green;
-}
-#sky{
-    width: 100vw;
-    height: 60vh;
-    background-color: lightblue;
-}
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-.house {
-    height: 80vh;
-    width: 80%;
-    border: 7px solid chocolate;
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    background-color: #F2937E;
-}
+        body{
+            background-color: green;
+        }
+
+        main{
+            background-color: lightblue;
+        }
+        #house {
+            position: relative;
+            top: 150px;
+            margin: 0 auto 0 auto;
+            width: 500px;
+            height: 400px;
+            background-color: #ffa35c;
+            border: 5px solid;
+        }
+
+        #house > div {
+            position: absolute;
+        }
+
+        #chimney {
+            height: 110px;
+            width: 100px;
+            top: -90px;
+            left: 300px;
+            background-color: dimgray;
+            border: 10px dashed;
+            border-top-left-radius: 30%;
+            border-top-right-radius: 30%;
+            border-bottom-left-radius: 10%;
+            border-bottom-right-radius: 10%;
+            z-index: 1;
+        }
+
+        #roof {
+            width: 100%;
+            height: 30%;
+            /*background-color: lightcoral;*/
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #roof .roof-plates {
+            position: relative;
+            /*display: inline-block;*/
+            height: 100%;
+            width: 14%;
+            background-color: brown;
+            border: 4px solid;
+            border-bottom-left-radius: 19%;
+            border-bottom-right-radius: 19%;
+        }
+
+        #window-1{
+            height: 80px;
+            width: 80px;
+            background-color: lightcyan;
+            border: 3px solid;
+            top: 180px;
+            left: 35px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        #window-2{
+            height: 80px;
+            width: 80px;
+            background-color: lightcyan;
+            border: 3px solid;
+            top: 180px;
+            right: 35px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .window-glass{
+            position: relative;
+            height: 50%;
+            width: 50%;
+            border: 2px solid;
+
+        }
+
+        #door{
+            height: 40%;
+            width: 20%;
+            background-color: #8B4513;
+            border: 5px solid;
+            border-bottom: 0;
+            bottom: 0;
+            left: 194px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #door #door-section{
+            position: relative;
+            height: 100%;
+            width: 1%;
+            border: 2px solid black;
+        }
+
+        #door #door-lock{
+            height: 15px;
+            width: 15px;
+            border: 3px solid black;
+            border-radius: 50%;
+            background-color: lightyellow;
+            position: absolute;
+            top: 55%;
+            right: 25px;
+        }
+
+        #welcome-box{
+            padding-top: 3px;
+            text-align: center;
+            bottom: -8%;
+            background-color: #61ba6b;
+            height: 30px;
+            width: 20%;
+            left: 194px;
+            transform: skewX(-15deg);
+        }
