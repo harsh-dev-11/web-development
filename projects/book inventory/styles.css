@@ -1,0 +1,92 @@
+*{
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+thead{
+    background: linear-gradient(to bottom, #ACE5FC , #81D8FA);
+    color: black;
+}
+
+.read{
+    background: linear-gradient(to bottom, #C8FFC8 , #9CF299);
+}
+
+.to-read{
+    background: linear-gradient(to bottom, rgb(237, 236, 236) 70%, #dcdcdc); 
+}
+
+.in-progress{
+    background: linear-gradient(to bottom, #FFECC5 , #FFDF9E); 
+}
+
+span{
+    display: inline-block;
+}
+
+tr.read span.status{
+    border: 1px solid black;
+    border-radius: 30px;
+    text-align: center;
+    background: linear-gradient(to bottom, #b6ffb7 0%, #00d934 100%);
+    box-shadow: 0 2px 8px 0 rgba(0, 128, 0, 0.4), 0 1.5px 0 #50ef34 inset;    
+}
+
+tr.to-read span.status{
+    border: 1px solid black;
+    border-radius: 30px;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffb6b6 0%, #d90000 100%);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4), 0 1.5px 0 #c0c0c0 inset;    
+}
+
+tr.in-progress span.status{
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffeab6 0%, #ffbc34 100%);
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4), 0 1.5px 0 #c0c0c0 inset;    
+}
+
+span.status, span.rate{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+}
+
+span.rate > span{
+    display: inline-block;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.783), 0 1.5px 0 #c0c0c0 inset;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+
+/* Rate one - fill only the first inner span */
+span[class~="one"] > span:first-child {
+  background-image: linear-gradient(45deg, #f9d423, #ff4e50);
+  border-color: #f9d423;
+}
+
+/* Rate two - fill the first two inner spans */
+span[class~="two"] > span:nth-child(-n+2) {
+  background-image: linear-gradient(45deg, #f9d423, #ff4e50);
+  border-color: #f9d423;
+}
+
+/* Rate three - fill all three inner spans */
+span[class~="three"] > span {
+  background-image: linear-gradient(45deg, #f9d423, #ff4e50);
+  border-color: #f9d423;
+}
+
+tbody > tr td:last-of-type{
+    width: 90px;
+}
