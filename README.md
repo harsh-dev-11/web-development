@@ -2,12 +2,12 @@
 
 Welcome to the core web workspace.
 
-Currently following the MERN stack and documenting each tech-stack with code and projects.
+Following the MERN stack along with projects.
 ---
 
-## 📦 What's Inside?
+##  What's Inside?
 
-Expect to find structured modules and practice work across the following technologies:
+structured modules and practice work across the following technologies:
 
 -  **HTML** 
 -  **CSS** *(in progress)*
