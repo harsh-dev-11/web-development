@@ -19,7 +19,15 @@ header .nav-links{
     font-weight: bold;
     padding: 5px;
 }
-
+.home-redirect:hover{
+    border: 1px solid gray;
+    border-radius: 9px;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.164);
+    transition: 0.2s ease;
+}
+.nav-links .home-redirect img{
+    max-height: 20px;
+}
 .nav-links .pages-redirect ul{
     display: flex;
     list-style: none;
@@ -29,6 +37,10 @@ header .nav-links{
 ul li{
     padding-left: 10px;
     font-size: large;
+}
+
+li:hover{
+    text-decoration: underline;
 }
 
 a{
@@ -42,7 +54,6 @@ a{
 
 main{
     max-width: 700px;
-    border: 2px solid;
     margin: 0 auto 0 auto;
     padding: 5px;
     margin-top: 80px;
@@ -66,4 +77,17 @@ p{
     border: 1px solid;
     border-radius: 7px;
     margin: 0 auto 20px auto;
+}
+
+footer{
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+}
+
+footer p{
+    max-width: 400px;
+    text-align: center;
 }
