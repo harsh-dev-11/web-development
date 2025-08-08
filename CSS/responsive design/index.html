@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive designs</title>
+    <style>
+        body {
+            font-size: 2rem;
+            color: blue;
+        }
+
+        .container {
+            border: 1px solid black;
+            height: 90vh;
+            width: 90vw;
+            margin: 0 auto 0 auto;
+        }
+
+        @media (min-width: 600px) {
+            body {
+                font-size: 0.5rem;
+                color: red;
+            }
+        }
+
+        /*Media Query for theme changing*/
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black;
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">Sample text
+        <hr>
+        <button id="cool_buttom">
+            Dark Mode
+        </button>
+    </div>
+</body>
+
+</html>
