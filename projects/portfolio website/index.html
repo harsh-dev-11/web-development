@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,20 +31,20 @@
         </div>
 
         <!-- About Section -->
-        <div id="current-working">
+        <div id="about-section">
             I've just launched this portfolio website you're viewing. <br> I'm also working on my <a
                 href="">projects</a>, sharing my
             thoughts on <a href="">blog</a> and I document my whole journey on GitHub.
         </div>
 
         <!-- Contact Redirect-->
-        <div><a href="">Get in touch -></a></div>
+        <div id="contact-redirect"><a href="">Get in touch -></a></div>
 
         <!-- Project Section -->
         <div class="project-container">
             <!-- container-header -->
             <div class="p_container-upper-section">
-                <span id="container-name">Projects</span>
+                <span>Projects</span>
                 <span><a href="">See all</a></span>
             </div>
             <!-- container-main -->
@@ -46,33 +52,99 @@
                 <!-- first project -->
                 <div class="projects" id="first-project">
                     <div class="project-header">
-                        <span>name</span>
-                        <span>date</span>
+                        <span>Portfolio</span>
+                        <span>August</span>
                     </div>
                     <div class="project-description">
-                        Responsive portfolio website
+                        A responsive, mobile-first portfolio website built to showcase my web development skills.
+                    </div>
+                    <div class="project-redirect">
+                        Click to visit
                     </div>
                 </div>
                 <!-- second project -->
                 <div class="projects" id="second-project">
                     <div class="project-header">
-                        <span>name</span>
-                        <span>date</span>
+                        <span>Shopping List</span>
+                        <span>June</span>
+                    </div>
+                    <div class="project-description">
+                        A simple C++ inventory management program allowing users to add, view, remove, and list items
+                    </div>
+                    <div class="project-redirect">
+                        Click to visit
                     </div>
                 </div>
                 <!-- third project -->
                 <div class="projects" id="third-project">
                     <div class="project-header">
-                        <span>name</span>
-                        <span>date</span>
+                        <span>Quiz Webpage</span>
+                        <span>July</span>
+                    </div>
+                    <div class="project-description">
+                        A responsive, quiz-webpage implemented using HTML forms, styled with mordern CSS.
+                    </div>
+                    <div class="project-redirect">
+                        Click to visit
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Thoughts Section -->
+        <div class="thoughts-section">
+            <div class="thoughts-header">
+                <span>Thoughts</span>
+                <span><a href="">See all</a></span>
+            </div>
+            <hr>
+            <div class="thoughts-main">
+                <!-- thought 1 -->
+                <div class="thoughts" id="first-thought">
+                    <span>Art of learning</span>
+                    <span><a href="">Read -></a></span>
+                </div>
+
+                <!-- thought 2 -->
+                <div class="thoughts" id="second-thought">
+                    <span>Art of learning</span>
+                    <span><a href="">Read -></a></span>
+                </div>
+
+                <!-- thought 3 -->
+                <div class="thoughts" id="third-thought">
+                    <span>Art of learning</span>
+                    <span><a href="">Read -></a></span>
+                </div>
+            </div>
         </div>
+
+        <!-- Newsletter section -->
+        <div class="newsletter-section">
+            <div class="newsletter-header">
+                <span>Newsletter</span>
+            </div>
+            <div class="newsletter-main">
+                <span>Sign up below to receive monthly updates from me straight in your inbox.</span>
+
+                <input id="email" type="email">
+                <button form="email" type="submit">Sign Up</button>
+            </div>
         </div>
     </main>
-    <footer></footer>
+    <hr>
+
+    <footer>
+        <div class="copyright-info">
+            @2025- Harsh Dhiman
+        </div>
+        <div class="breadcrumb-navigation">
+            <span><a href="">Home</a></span>/
+            <span><a href="">Projects</a></span>/
+            <span><a href="">Blogs</a></span>/
+            <span><a href="">Contact</a></span>/
+        </div>
+    </footer>
 </body>
 
 </html>
