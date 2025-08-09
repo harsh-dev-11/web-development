@@ -2,7 +2,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: monospace;
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #bold {
@@ -53,13 +56,23 @@ main #image-frame img {
     width: 200px;
     /* border: 1px solid; */
     margin-left: 20px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 #contact-redirect a {
     text-decoration: none;
     font-size: 1.23em;
-    color: rgb(26, 26, 26);
+    color: white;
+    background-color: #333;
+    border-radius: 18px;
+    padding: 6px;
+}
+
+#contact-redirect a:hover {
+    color: rgb(236, 236, 236);
+    background-color: #060606;
+    border-radius: 18px;
+    transition: 0.6s ease;
 }
 
 .p_container-upper-section span:first-of-type {
@@ -111,7 +124,7 @@ main #image-frame img {
 .projects {
     width: 90%;
     /* border: 1px solid; */
-    border-radius: 10px;
+    border-radius: 18px;
     margin: 10px auto 0 auto;
     background-color: #f5f5f5;
     overflow: hidden;
@@ -141,13 +154,16 @@ main #image-frame img {
 
 .project-header span:last-of-type {
     position: relative;
-    right: 10px;
+    right: 30px;
     font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -0.5px;
 }
 
 .projects .project-description {
     padding: 8px;
     font-size: 1.2rem;
+    padding-left: 21px;
 }
 
 .projects .project-redirect {
@@ -157,6 +173,7 @@ main #image-frame img {
     position: relative;
     left: 10px;
     padding: 2px;
+    padding-left: 21px;
     margin-bottom: 15px;
     text-decoration: underline;
 }
@@ -251,7 +268,7 @@ hr {
     width: 85%;
     /* padding: 10px; */
     /* border: 1px solid; */
-    border-radius: 10px;
+    border-radius: 18px;
     margin: 50px auto 40px auto;
     background-color: #f5f5f5;
 }
@@ -275,8 +292,9 @@ hr {
 
 .newsletter-main {
     padding-top: 10px;
+    padding-left: 10px;
     width: 90%;
-    margin: 0 auto 0 auto;
+    margin: -6px auto -5px auto;
     /* border: 2px solid red; */
     font-size: 1.2rem;
     line-height: 1.5;
@@ -292,20 +310,21 @@ hr {
     border-radius: 5px;
     padding: 5px;
     width: 95%;
-
+    font-size: large;
+    padding-left: 10px;
 }
 
 .newsletter-main button {
     display: block;
-    height: 2.5em;
+    height: 2em;
     font-size: 1.2rem;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 18px;
     padding: 5px;
     background-color: #333;
     width: 30%;
-    margin: 0 auto 0 auto;
+    margin: -17px auto 0 auto;
 }
 
 /* Footer section */
@@ -331,4 +350,56 @@ footer div:last-of-type {
 
 .breadcrumb-navigation span a {
     color: #333;
+}
+
+/* media queries implemented for desktop responsiveness */
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+        padding: 40px;
+        /* border: 2px solid blue; */
+        max-width: 700px;
+        margin: 0 auto 0 auto;
+        background-color: #fafaf8;
+    }
+
+    .project-container {
+        width: 100%;
+    }
+
+    .thoughts-section {
+        width: 100%;
+    }
+
+    #hi-message {
+        font-size: 2.7rem;
+        line-height: 1.2;
+    }
+
+    #about-section {
+        line-height: 1.6;
+        font-weight: 550;
+        font-size: 1.3rem;
+    }
+
+    #contact-redirect a {
+        font-size: 1.25rem;
+    }
+
+    .thoughts-section {
+        margin-top: 47px;
+    }
+
+    .p_container-upper-section {
+        background-color: #fafaf8;
+    }
+
+    .projects .project-description {
+        font-size: 1.4rem;
+    }
+
+    .thoughts-main .thoughts span:first-of-type {
+        font-size: 1.4rem;
+    }
 }
