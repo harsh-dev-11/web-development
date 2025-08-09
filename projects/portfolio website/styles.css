@@ -5,9 +5,8 @@
     font-family: monospace;
 }
 
-@font-face {
-    font-family: "MyCustomFont1";
-    src: url(./assets/droid-sans/DroidSans-Bold.ttf);
+#bold {
+    font-weight: bold;
 }
 
 main #image-frame {
@@ -26,13 +25,14 @@ main #image-frame img {
 }
 
 #hi-message {
-    font-size: 2.2rem;
+    font-size: 2rem;
     /* font-family: "Funnel Display", sans-serif; */
-    font-family: "Funnel Display", sans-serif;
-    font-optical-sizing: auto;
+    font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    letter-spacing: -1.5px;
-    line-height: 1.2em;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     /* border: 1px solid; */
     margin: 18px 10px 20px 10px;
     padding: 10px;
@@ -43,6 +43,7 @@ main #image-frame img {
     margin: 10px;
     padding: 10px;
     font-size: 1.2rem;
+    line-height: 1.5;
     font-weight: 700;
 }
 
@@ -63,22 +64,30 @@ main #image-frame img {
 
 .p_container-upper-section span:first-of-type {
     /* font-family: sans-serif; */
-    font-size: 2rem;
-    font-family: "MyCustomFont1";
+    font-size: 2.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     font-optical-sizing: auto;
-    font-weight: 600;
-    letter-spacing: -1.2px;
     position: relative;
-    left: 20px;
+    left: 1px;
 }
 
 .project-container .p_container-upper-section span:last-of-type a {
     color: black;
     font-size: 1.2rem;
-    /* text-decoration: none; */
+
     font-weight: 700;
     position: relative;
-    right: 20px;
+    right: 10px;
+}
+
+.p_container-main-section {
+    /* background-color: red; */
+    margin-top: 20px;
 }
 
 .project-container {
@@ -95,7 +104,7 @@ main #image-frame img {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    background-color: rgb(250, 250, 250);
+    background-color: white;
     margin-bottom: 20px;
 }
 
@@ -104,15 +113,18 @@ main #image-frame img {
     /* border: 1px solid; */
     border-radius: 10px;
     margin: 10px auto 0 auto;
-    background-color: rgba(249, 249, 249, 0);
+    background-color: #f5f5f5;
     overflow: hidden;
     margin-bottom: 0px;
+    padding: 3px;
 }
 
 .projects .project-header {
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     justify-content: space-between;
 }
 
@@ -120,7 +132,11 @@ main #image-frame img {
     position: relative;
     left: 10px;
     font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    letter-spacing: -0.05em;
+    color: #333;
+    /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); */
 }
 
 .project-header span:last-of-type {
@@ -138,13 +154,16 @@ main #image-frame img {
     width: 50%;
     /* border: 1px solid; */
     font-family: sans-serif;
+    position: relative;
+    left: 10px;
     padding: 2px;
+    margin-bottom: 15px;
     text-decoration: underline;
 }
 
 .thoughts-section {
     width: 95vw;
-    border: 1px solid;
+    /* border: 1px solid; */
     border-radius: 2%;
     margin: 20px auto 0 auto;
     overflow: hidden;
@@ -160,13 +179,16 @@ main #image-frame img {
 
 .thoughts-header span:first-of-type {
     /* font-family: sans-serif; */
-    font-size: 2rem;
-    font-family: "MyCustomFont1";
+    font-size: 2.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     font-optical-sizing: auto;
-    font-weight: 600;
-    letter-spacing: -1.2px;
     position: relative;
-    left: 20px;
+    left: 10px;
 }
 
 .thoughts-header span:last-of-type a {
@@ -189,7 +211,8 @@ hr {
 
 .thoughts-main .thoughts {
     /* height: 200px; */
-    border: 1px solid;
+    /* border: 1px solid; */
+    border-bottom: 1px solid;
     width: 90%;
     margin: 15px auto 0 auto;
     display: flex;
@@ -209,5 +232,103 @@ hr {
 .thoughts-main .thoughts span:last-of-type {
     position: relative;
     right: 10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+}
+
+#first_hr {
+    width: 90%;
+    margin: 0 auto 0 auto;
+    border: 1.8px solid;
+}
+
+.thoughts-main .thoughts span:last-of-type a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Newsletter section */
+.newsletter-section {
+    width: 85%;
+    /* padding: 10px; */
+    /* border: 1px solid; */
+    border-radius: 10px;
+    margin: 50px auto 40px auto;
+    background-color: #f5f5f5;
+}
+
+.newsletter-header {
+    padding-top: 20px;
+}
+
+.newsletter-header span {
+    font-size: 2.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    color: #333;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    font-optical-sizing: auto;
+    position: relative;
+    left: 10px;
+}
+
+.newsletter-main {
+    padding-top: 10px;
+    width: 90%;
+    margin: 0 auto 0 auto;
+    /* border: 2px solid red; */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.newsletter-main input {
+    display: block;
+    margin: 10px auto 0 auto;
+    height: 3em;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 95%;
+
+}
+
+.newsletter-main button {
+    display: block;
+    height: 2.5em;
+    font-size: 1.2rem;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #333;
+    width: 30%;
+    margin: 0 auto 0 auto;
+}
+
+/* Footer section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+footer div:first-of-type {
+    position: relative;
+    left: 10px;
+    letter-spacing: -0.5;
+}
+
+footer div:last-of-type {
+    position: relative;
+    right: 10px;
+    color: #333;
+}
+
+.breadcrumb-navigation span a {
+    color: #333;
 }

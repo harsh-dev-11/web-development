@@ -6,15 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lexend:wght@100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
 </head>
 
 <body>
@@ -41,7 +36,7 @@
         <div id="contact-redirect"><a href="">Get in touch -></a></div>
 
         <!-- Project Section -->
-        <div class="project-container">
+        <div class="project-container" id="project-redirect">
             <!-- container-header -->
             <div class="p_container-upper-section">
                 <span>Projects</span>
@@ -92,28 +87,28 @@
         </div>
 
         <!-- Thoughts Section -->
-        <div class="thoughts-section">
+        <div class="thoughts-section" id="thought-redirect">
             <div class="thoughts-header">
                 <span>Thoughts</span>
                 <span><a href="">See all</a></span>
             </div>
-            <hr>
+            <hr id="first_hr">
             <div class="thoughts-main">
                 <!-- thought 1 -->
                 <div class="thoughts" id="first-thought">
-                    <span>Art of learning</span>
+                    <span>Art of knowledge</span>
                     <span><a href="">Read -></a></span>
                 </div>
 
                 <!-- thought 2 -->
                 <div class="thoughts" id="second-thought">
-                    <span>Art of learning</span>
+                    <span>Every single day</span>
                     <span><a href="">Read -></a></span>
                 </div>
 
                 <!-- thought 3 -->
                 <div class="thoughts" id="third-thought">
-                    <span>Art of learning</span>
+                    <span>Hobby of learning</span>
                     <span><a href="">Read -></a></span>
                 </div>
             </div>
@@ -125,24 +120,22 @@
                 <span>Newsletter</span>
             </div>
             <div class="newsletter-main">
-                <span>Sign up below to receive monthly updates from me straight in your inbox.</span>
+                <span>Sign up below to receive monthly updates from me straight in your inbox.</span><br>
 
-                <input id="email" type="email">
+                <input id="email" type="email" placeholder="email"><br>
                 <button form="email" type="submit">Sign Up</button>
             </div>
         </div>
     </main>
     <hr>
-
     <footer>
         <div class="copyright-info">
-            @2025- Harsh Dhiman
+            &copy;2025 Harsh
         </div>
         <div class="breadcrumb-navigation">
-            <span><a href="">Home</a></span>/
-            <span><a href="">Projects</a></span>/
-            <span><a href="">Blogs</a></span>/
-            <span><a href="">Contact</a></span>/
+            <span><a id="bold" href="index.html">Home</a></span>
+            <span><a href="#project-redirect">/Projects</a></span>
+            <span><a href="#thought-redirect">/Thoughts</a></span>
         </div>
     </footer>
 </body>
