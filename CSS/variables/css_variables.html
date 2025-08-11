@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        /* Creating a CSS variable or custom properties */
+        :root {
+            --main-bg-color: #333;
+            --main-font-color: #e8e8e8;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            display: inline-block;
+            height: 400px;
+            width: 400px;
+            margin: 80px;
+            border: 1px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+        }
+
+        .box1 {
+            background-color: lightgoldenrodyellow;
+        }
+
+        .box2 {
+            background-color: var(--main-bg-color);
+            color: var(--main-font-color);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        Box 1
+    </div>
+    <div class="box2">
+        Box 2
+    </div>
+</body>
+
+</html>
