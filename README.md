@@ -2,7 +2,7 @@
 
 Welcome to the core web workspace.
 
-Following the MERN stack along with projects.
+Full Stack development journey along with projects
 ---
 
 ##  What's Inside?
