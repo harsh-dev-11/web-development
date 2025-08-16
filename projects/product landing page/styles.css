@@ -1,181 +1,236 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body {
-    background-color: #eee;
+:root {
+    --main-color: #DCDCDC;
 }
 
-#header {
-    padding: 5px;
-    /* border: 1px solid green; */
+main {
+    /* border: 2px solid; */
+    width: 95%;
+    margin: auto;
+}
+
+/* header section */
+header {
+    /* border: 1px solid; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 8vh;
+    /* background-color: lightsalmon; */
+    height: 50px;
 }
 
 #header-img {
-    height: 8vh;
+    height: 100%;
+    max-width: 45vw;
+    /* padding-left: 20px; */
+}
+
+nav {
+    /* margin-right: 20px; */
+    /* border: 1px solid; */
 }
 
 ul {
+    height: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-ul li {
+.nav-link {
+    margin-right: 5px;
     list-style-type: none;
-    margin-left: 20px;
 }
 
-a {
-    font-size: 1.2rem;
-    color: black;
+.nav-link a {
+    color: #333;
+    font-size: 16px;
     text-decoration: none;
+    letter-spacing: -0.8px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
+/* form section */
 #form {
-    /* border: 2px solid green; */
+    min-width: 250px;
+    margin: 40px auto 30px auto;
+    /* border: 1px solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 200px;
-    width: 50%;
-    margin: 20px auto;
+    justify-content: center;
+    gap: 25px;
 }
 
-h3 {
-    font-size: 1.5rem;
+#form h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
 }
 
-#form input:first-of-type {
-    width: 50%;
+#form input[type="email"] {
     height: 2rem;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    width: calc(max-content + 200px);
     display: flex;
     align-items: center;
-    padding-left: 5px;
+    padding-left: 7px;
 }
 
-#form input:last-of-type {
-    box-sizing: border-box;
-    background-color: #f1c40f;
-    font-size: 1.1rem;
-    height: 2.5rem;
-    border: none;
-    border-radius: 10px;
-    width: 30%;
-}
-
-#submit:hover {
-    box-sizing: border-box;
-    outline: 3px solid;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.1s ease;
-    background-color: #d1a700;
-    box-shadow: 20px 20px 50px 10px rgb(255, 235, 206) inset;
+#form input[type="submit"] {
+    display: block;
+    background-color: rgb(255, 185, 46);
+    width: 80px;
+    height: 2rem;
+    font-size: 1.15rem;
 }
 
 #feature {
-    width: 80vw;
-    margin: auto;
+    /* border: 1px solid; */
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    /* border: 3px solid; */
-    gap: 30px;
+    gap: 20px;
 }
 
 #inner-feature {
-    height: 100%;
-    width: 100%;
-    /* border: 3px dashed; */
     display: grid;
-    grid-template-columns: 120px 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 60px 1fr;
 }
 
 .icons {
-    /* background-color: lightgreen; */
+    /* border: 1px solid; */
     display: flex;
+    /* align-items: center; */
     justify-content: center;
-    align-items: center;
 }
 
-#feature-icons {
-    height: 80px;
+.icons .feature-icons {
+    height: 50%;
 }
 
-h4 {
-    font-size: 22px;
-    width: 100%;
-    /* color: red; */
-    margin-bottom: -15px;
+.feature-description {
+    /* border: 1px solid; */
+    padding: 0 20px;
 }
 
+.feature-description h4 {
+    font-size: 27px;
+    /* padding-left: 10px; */
+    font-weight: 800;
+    margin-bottom: 10px;
+}
 
+.feature-description p {
+    font-size: 1.05rem;
+    line-height: 1.3rem;
+}
+
+/* how-it-works section */
+#how-it-works {
+    margin: 30px auto;
+    padding: 20px 0 20px 0;
+    /* border: 1px solid; */
+}
+
+#yt_video {
+    width: 98%;
+    height: 250px;
+}
+
+/* pricing section */
 #pricing {
-    padding-top: 100px;
-    height: 400px;
+    /* border: 1px solid; */
+    padding: 20px 0;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    /* border: 2px solid; */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
-.price-sections {
-    height: 390px;
-    width: 22%;
-    border: 1px solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* border: 3px solid red; */
+#pricing .price-sections {
+    width: 45%;
+    height: 300px;
+    /* border: 1px solid; */
+    margin-bottom: 40px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 5px;
+}
+
+.price3 {
+    /* border: 3px solid tomato; */
+    min-width: 210px;
+    max-height: 270px;
+}
+
+.price3 .select-button {
+    bottom: 1px !important;
+
 }
 
 .price-sections .item-name {
-    /* border: 1px solid; */
-    height: 15%;
-    background-color: rgb(196, 196, 196);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.18rem;
+    background-color: rgb(232, 232, 232);
+    text-align: center;
+    font-size: 25px;
     font-weight: bold;
 }
 
-.price-sections .item-description {
+.item-description {
+    position: relative;
     /* border: 1px solid; */
-    height: 80%;
+    /* background-color: lightblue; */
+    height: 83%;
 }
 
 .item-description .item-price {
-    /* border: 1px solid; */
+    /* padding-top: 10px; */
+    font-size: 30px;
     text-align: center;
-    font-size: 2rem;
     font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
 }
 
 .item-description .item-info {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.item-description .select-button {
+    position: absolute;
+    bottom: 20px;
     /* border: 1px solid; */
+    /* width: calc((100% - fit-content) + 20px); */
+    width: calc(100% - 20px);
+    width: calc(50% + 5px);
+    height: 2rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    border: 1px solid;
     text-align: center;
-    padding: 0 50px;
-    line-height: 1.5rem;
+    background-color: rgb(255, 174, 0);
 }
 
-div[class="select-button"] {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+.item-description .select-button a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4rem;
 }
 
-div[class="select-button"] a {
-    background-color: rgba(255, 196, 0, 0.861);
-    padding: 3px 20px;
+@media screen and (min-width: 768px) {
+    main {
+        max-width: 70vw;
+    }
 }
