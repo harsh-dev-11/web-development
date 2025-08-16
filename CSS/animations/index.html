@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+        }
+
+        .box {
+            display: block;
+            height: 100px;
+            width: 100px;
+            background-color: rgb(0, 183, 255);
+            margin: 50px auto;
+            color: whitesmoke;
+            font-size: 1.9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            animation-name: spin;
+            animation-duration: 3s;
+            border-radius: 50%;
+        }
+
+        .box {
+            animation-name: color-change;
+            animation-duration: 3s;
+            animation-timing-function: ease;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes color-change {
+            0% {
+                background-color: red;
+            }
+
+            50% {
+                background-color: blue;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+        @keyframes slide-in {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: scale(2);
+                border-radius: 0%;
+            }
+
+            50% {
+                background-color: rgb(140, 247, 255);
+                color: #333;
+                transform: rotate(360deg);
+
+            }
+
+            100% {
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        Box
+    </div>
+</body>
+
+</html>
