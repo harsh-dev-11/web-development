@@ -12,7 +12,7 @@
     background-color: #BE3144;
     /* position: fixed; */
     width: 100%;
-    height: 40px;
+    height: 60px;
 }
 
 #navbar ul {
@@ -27,10 +27,83 @@
 .nav-links a {
     color: white;
     text-decoration: none;
-
+    font-size: 1.2rem;
 }
 
 .welcome-section {
     height: 100vh;
     background: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    /* border: 1px solid white; */
+    height: 20%;
+    width: 80%;
+    color: white;
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 3rem;
+    text-align: center;
+    font-style: normal;
+}
+
+p {
+    position: absolute;
+    padding-top: 20px;
+    top: 56%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    color: lightcoral;
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.project-section {
+    padding-top: 30px;
+    /* height: 100vh; */
+    width: 100%;
+    background-color: #45567d;
+}
+
+.project-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-title {
+    height: 300px;
+    width: 85%;
+    border: 1px solid;
+    margin-bottom: 60px;
+}
+
+.project-title .img-section {
+    width: 100%;
+    height: 85%;
+    overflow: hidden;
+}
+
+.project-title .project-name {
+    height: 15%;
+    background-color: #303841;
+    font-family: "Funnel Display", sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.485rem;
 }
