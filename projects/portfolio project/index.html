@@ -16,49 +16,66 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Funnel+Display:wght@300..800&family=Lexend:wght@100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <header>
         <nav id="navbar">
             <ul>
-                <li class="nav-links"><a href="#">About</a></li>
-                <li class="nav-links"><a href="#">Work</a></li>
-                <li class="nav-links"><a href="#">Contact</a></li>
+                <li class="nav-links"><a href="#welcome-section">About</a></li>
+                <li class="nav-links"><a href="#project-section">Work</a></li>
+                <li class="nav-links"><a href="#contact-section">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="welcome-section">
-            <h1>Hey I am Harsh</h1>
+        <div id="welcome-section">
+            <h1 class="welcome-section-heading">Hey I am Harsh</h1>
             <p>a web developer</p>
         </div>
-        <div class="project-section">
+        <div id="project-section">
+            <h2>These are some of my projects</h2>
             <div class="project-title">
                 <div class="img-section">
-                    <img src="./assets/tribute-project-image.png" alt="tribute project image">
+                    <img src="./assets/tribute-project.png" alt="tribute project image">
                 </div>
-                <div class="project-name">Tribute Page</div>
+                <div class="project-name"><a href="../tribute page/index.html">Tribute Page</a></div>
             </div>
             <div class="project-title">
                 <div class="img-section">
-                    <img src="./assets/newspaper-project-image.png" alt=" newspaper-project-image">
+                    <img src="./assets/newspaper-article-project.png" alt=" newspaper-project-image">
                 </div>
-                <div class="project-name">Newspaper Article</div>
+                <div class="project-name"><a href="../newspaper article/index.html">Newspaper Article</a></div>
             </div>
             <div class="project-title">
                 <div class="img-section">
-                    <img src="./assets/portfolio-project-image.png" alt="">
+                    <img src="./assets/penguin-projetc.png" alt="">
                 </div>
-                <div class="project-name">Perosnal Portfolio</div>
+                <div class="project-name"><a href="../penguin/index.html">Moving Penguing</a></div>
             </div>
         </div>
 
         <div class="profile-link">
 
         </div>
+
+        <div id="contact-section">
+            <div class="contact-section-message">
+                <div class="contact-section-heading">Let's work together...</div>
+                <div class="contact-section-paragraph">How do you take your coffee?</div>
+            </div>
+            <div class="contact-section-redirects">
+                <div class="contact-redirects"><i class="fab fa-github"></i> Github</div>
+                <div class="contact-redirects"><i class="fab fa-twitter"></i> Twitter</div>
+                <div class="contact-redirects"><i class="fab fa-linkedin-in"></i> LinkedIn</div>
+            </div>
+        </div>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="code-quote">"Code is the bridge between imagination and reality."</div>
+        <div class="copyright-section">&copy Harsh Dhiman 2025</div>
+    </footer>
 </body>
 
 </html>
