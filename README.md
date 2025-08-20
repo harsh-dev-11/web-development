@@ -10,8 +10,8 @@ Full Stack development journey along with projects
 structured modules and practice work across the following technologies:
 
 -  **HTML** 
--  **CSS** *(in progress)*
--  **JavaScript** *(upcoming)*
+-  **CSS** 
+-  **JavaScript** *(in-progress)*
 <!-- -  **Front-end Libraries** *(upcoming)*
 -  **Python for Web** *(upcoming)*
 -  **Relational Databases (MySQL, PostgreSQL)** *(upcoming)* -->
