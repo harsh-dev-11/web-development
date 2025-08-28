@@ -1,2 +1,2 @@
-let piValue = Math.PI();
+let piValue = Math.PI;
 console.log(piValue);
