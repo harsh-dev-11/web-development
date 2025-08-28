@@ -1,7 +1,4 @@
-let infinityNumber = 1 / 0;
-console.log(infinityNumber); 
-console.log(typeof infinityNumber);
+let temperature = 20;
 
-let notANumber = "string" / 2;
-console.log(notANumber);
-console.log(typeof notANumber);
+let weather = temperature > 25 ? 'hot' : 'cold';
+console.log(`Today is ${weather} day.`);
