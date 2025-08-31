@@ -2,7 +2,7 @@
 
 Welcome to the core web workspace.
 
-Full Stack development journey along with projects
+Full Stack development journey with projects
 ---
 
 ##  What's Inside?
