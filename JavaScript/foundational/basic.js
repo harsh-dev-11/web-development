@@ -1,20 +1,35 @@
-/*
-    -- String manipulation in JavaScript --
-    in JS, we can manipulate strings using various methods.
-    1. String concatenation
+// creating empty variable
 
-*/
+let var1;
+console.log("---- First output ----");
+console.log(`value: ${var1}`);
+console.log("data-type: " + typeof (var1));
 
-// string concatenation
-let $firstName = "John";
-let $lastName = "Doe";
+// intitializing and printing 
+console.log("---- Second output ----");
+var1 = 10; // intitialized the variable
+console.log(`value: ${var1}`);
+console.log("data-type: " + typeof (var1));
 
-// Using the + operator
-let $fullName = $firstName + " " + $lastName; // spacing is important here
-console.log("Using + operator"); 
-console.log($fullName); // Output: John Doe
+// creating a constant variable
+console.log("---- Third output ----");
+const var2 = 20;
+console.log(`value: ${var2}`);
+console.log("data-type: " + typeof (var2));
 
-// using concat() method
-let $fullNameConcat = $firstName.concat(" ", $lastName);
-console.log("Using concat() method"); 
-console.log($fullNameConcat); // Output: John Doe
+// creating a null variable
+let var3 = null;
+console.log("---- Fourth output ----");
+console.log(`value: ${var3}`);
+console.log("data-type: " + typeof (var3));
+
+var3 = 20;
+console.log("---- Fifth output ----");
+console.log(`value: ${var3}`);
+console.log("data-type: " + typeof (var3));
+
+// creating a big-int variable
+let var4 = 2342n;
+console.log("---- Sixth output ----");
+console.log(`value: ${var4}`);
+console.log("data-type: " + typeof (var4));
