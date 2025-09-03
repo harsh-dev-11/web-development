@@ -1,2 +1,5 @@
-let data = 100;  // Initially a number
-data = "New data";  // Dynamically changes to a string
+console.log(null == 0);  // false
+console.log(null == ''); // false
+console.log(undefined == null); // true
+console.log(undefined === null); // false
+console.log(undefined == ''); // false
