@@ -1,5 +1,10 @@
-console.log(null == 0);  // false
-console.log(null == ''); // false
-console.log(undefined == null); // true
-console.log(undefined === null); // false
-console.log(undefined == ''); // false
+// global scope
+let var1 = "global variable";
+
+// local scope
+{
+    let var2 = "loca variable";
+}
+
+console.log(var1); // works
+console.log(var2); // ReferenceError: var2 is not defined
