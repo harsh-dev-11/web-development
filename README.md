@@ -11,7 +11,7 @@ structured modules and practice work across the following technologies:
 
 -  **HTML** 
 -  **CSS** 
--  **JavaScript** *(in-progress)*
+-  **JavaScript** 
 <!-- -  **Front-end Libraries** *(upcoming)*
 -  **Python for Web** *(upcoming)*
 -  **Relational Databases (MySQL, PostgreSQL)** *(upcoming)* -->
