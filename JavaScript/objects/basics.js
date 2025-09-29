@@ -1,4 +1,10 @@
-let marks = 95;
-marks = 97;
+// creating the object
 
-console.log(marks); 
+const cars = {
+    name: "BMW",
+    model: "X5",
+    year: 2020,
+    color: "black"
+};
+
+console.log(cars.name);
