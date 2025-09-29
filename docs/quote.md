@@ -1,0 +1,1 @@
+All power is within you. You can do anything and everything.
