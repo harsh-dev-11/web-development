@@ -1,3 +1,5 @@
+// working of this quiz game is at the end as the comments
+
 // creating question array
 let questions = [];
 
@@ -67,3 +69,11 @@ function getResults(questionObj, computerChoice) {
         return `The computer's choice is wrong. The correct answer is: ${questionObj.answer}`;
     }
 }
+
+
+//  It defines a list of question objects, each containing a category, the question text, multiple choices,
+//  and the correct answer. A function selects a random question from the list, and another function randomly
+//  picks one choice from that question’s choices. The chosen question and the computer’s picked choice are
+//  then passed to a result-checking function, which compares the choice to the question’s correct answer
+//  and returns a message indicating whether the computer’s choice was correct or, if not, what the correct
+//  answer is.
