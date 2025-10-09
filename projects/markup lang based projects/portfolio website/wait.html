@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Under Construction</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #ddd;
+      margin-bottom: 2em;
+    }
+
+    /* Loader (construction animation) */
+    .loader {
+      position: relative;
+      width: 150px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .loader::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, #ffcc00, transparent);
+      animation: move 1s linear infinite;
+    }
+
+    @keyframes move {
+      0% { left: -50%; }
+      100% { left: 100%; }
+    }
+
+    /* Animated background (moving gear icons) */
+    .gear {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: url('https://cdn-icons-png.flaticon.com/512/6062/6062643.png') no-repeat center/contain;
+      opacity: 0.15;
+      animation: spin 10s linear infinite;
+    }
+
+    .gear:nth-child(1) {
+      top: 20%;
+      left: 10%;
+      animation-duration: 12s;
+    }
+
+    .gear:nth-child(2) {
+      top: 70%;
+      right: 15%;
+      animation-duration: 8s;
+    }
+
+    .gear:nth-child(3) {
+      bottom: 15%;
+      left: 40%;
+      animation-duration: 15s;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated gears in background -->
+  <div class="gear"></div>
+  <div class="gear"></div>
+  <div class="gear"></div>
+
+  <!-- Main message -->
+  <h1>🚧 Website Under Construction 🚧</h1>
+  <p>Please check back soon. We're working hard to build something great!</p>
+
+  <!-- Animated loader bar -->
+  <div class="loader"></div>
+</body>
+</html>
