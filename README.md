@@ -17,7 +17,7 @@ structured modules and practice work across the following technologies:
 -  **Relational Databases (MySQL, PostgreSQL)** *(upcoming)* -->
 <!-- -  **Backend with JavaScript (Node.js, Express.js)** *(upcoming)* -->
 
-<!-- > **Note:** This repository is actively growing — updates and new content are frequent. -->
+> **Note:** This repository is actively growing — updates and new content are frequent.
 
 ---
 
