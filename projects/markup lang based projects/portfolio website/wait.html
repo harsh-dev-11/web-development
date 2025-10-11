@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Website Under Construction</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Construction | Harsh's Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <style>
-    /* Basic reset */
+    /* --- CUSTOMIZATION VARIABLES --- */
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #cccccc;
+      --highlight-color: #00aaff;
+      --background-gradient-start: #1a233a;
+      --background-gradient-end: #10141f;
+    }
+
+    /* ----------------------------- */
+
     * {
       margin: 0;
       padding: 0;
@@ -13,101 +31,204 @@
     }
 
     body {
-      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+      color: var(--primary-color);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      overflow: hidden;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      padding: 40px 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-      letter-spacing: 2px;
-      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--highlight-color);
+      margin-bottom: 25px;
     }
 
     p {
-      font-size: 1.2em;
-      color: #ddd;
-      margin-bottom: 2em;
+      font-size: 1.1rem;
+      color: var(--secondary-color);
+      line-height: 1.7;
+      margin-bottom: 40px;
     }
 
-    /* Loader (construction animation) */
-    .loader {
-      position: relative;
-      width: 150px;
-      height: 20px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      overflow: hidden;
+    #countdown {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
     }
 
-    .loader::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -50%;
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, #ffcc00, transparent);
-      animation: move 1s linear infinite;
+    .time-unit {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 15px 20px;
+      border-radius: 8px;
+      width: 90px;
     }
 
-    @keyframes move {
-      0% { left: -50%; }
-      100% { left: 100%; }
+    .time-unit span {
+      display: block;
+      font-size: 2.5rem;
+      font-weight: 700;
     }
 
-    /* Animated background (moving gear icons) */
-    .gear {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      background: url('https://cdn-icons-png.flaticon.com/512/6062/6062643.png') no-repeat center/contain;
-      opacity: 0.15;
-      animation: spin 10s linear infinite;
+    .time-unit small {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--secondary-color);
+      letter-spacing: 1px;
     }
 
-    .gear:nth-child(1) {
-      top: 20%;
-      left: 10%;
-      animation-duration: 12s;
+    .social-links h3 {
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: var(--secondary-color);
     }
 
-    .gear:nth-child(2) {
-      top: 70%;
-      right: 15%;
-      animation-duration: 8s;
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
     }
 
-    .gear:nth-child(3) {
-      bottom: 15%;
-      left: 40%;
-      animation-duration: 15s;
+    .social-icons a {
+      color: var(--secondary-color);
+      font-size: 1.8rem;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+    .social-icons a:hover {
+      color: var(--highlight-color);
+      transform: translateY(-5px);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      #countdown {
+        gap: 10px;
+      }
+
+      .time-unit {
+        width: 70px;
+        padding: 10px;
+      }
+
+      .time-unit span {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
+
 <body>
-  <!-- Animated gears in background -->
-  <div class="gear"></div>
-  <div class="gear"></div>
-  <div class="gear"></div>
 
-  <!-- Main message -->
-  <h1>🚧 Website Under Construction 🚧</h1>
-  <p>Please check back soon. We're working hard to build something great!</p>
+  <div class="container">
+    <h1>Harsh Dhiman</h1>
 
-  <!-- Animated loader bar -->
-  <div class="loader"></div>
+    <div class="subtitle">My New Portfolio is Coming Soon</div>
+
+    <p>Big things are brewing! A brand-new portfolio is in the works, packed with the latest projects and skills worth
+      checking out. Get ready for the reveal.</p>
+
+    <div id="countdown">
+      <div class="time-unit">
+        <span id="days">00</span>
+        <small>Days</small>
+      </div>
+      <div class="time-unit">
+        <span id="hours">00</span>
+        <small>Hours</small>
+      </div>
+      <div class="time-unit">
+        <span id="minutes">00</span>
+        <small>Minutes</small>
+      </div>
+      <div class="time-unit">
+        <span id="seconds">00</span>
+        <small>Seconds</small>
+      </div>
+    </div>
+
+    <div class="social-links">
+      <h3>Get in touch & stay updated:</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/harsh7044/" target="_blank" aria-label="LinkedIn"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/h-dhiman08" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/h_dhiman08" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:harshdhiman7044@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // --- CUSTOMIZATION: Set your launch date here ---
+    // Format: "Month Day, Year HH:MM:SS" e.g., "Jan 1, 2026 00:00:00"
+    const launchDate = new Date("Oct 26, 2025 00:00:00").getTime();
+    // ------------------------------------------------
+
+    const countdownFunction = setInterval(function () {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "<h2>We're Live!</h2>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Add leading zero if number is less than 10
+      const format = (num) => (num < 10 ? '0' + num : num);
+
+      document.getElementById("days").innerText = format(days);
+      document.getElementById("hours").innerText = format(hours);
+      document.getElementById("minutes").innerText = format(minutes);
+      document.getElementById("seconds").innerText = format(seconds);
+
+    }, 1000);
+  </script>
+
 </body>
+
 </html>
