@@ -1,3 +1,6 @@
+import utilityModule from './modules/utils.js';
+const { print } = utilityModule;
+
 function mutation(arr) {
 	let result = true;
 	let firstStr = arr[0].toLowerCase();
@@ -26,6 +29,6 @@ function mutation(arr) {
 let strArray = ["zyxwvutsrqponmlkjihgfedcba", "qrstu"];
 print(mutation(strArray));
 
-function print(value) {
-	console.log(value);
-}
+// function print(value) {
+// 	console.log(value);
+// }
