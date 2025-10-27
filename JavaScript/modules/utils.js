@@ -5,7 +5,7 @@ const subtract = (a, b) => a - b;
 const print = (value) => console.log(value);
 
 export default {
-    add,
-    subtract,
-    print
-}
+  add,
+  subtract,
+  print,
+};
