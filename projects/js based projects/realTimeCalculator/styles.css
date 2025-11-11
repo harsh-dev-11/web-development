@@ -14,35 +14,45 @@ body{
 .container{
     width: 500px;
     height: 250px;
-    border: 3px solid darkred;
+    /* border: 3px solid darkred; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .main-heading{
+    font-family: "Stack Sans Headline", sans-serif;
+    letter-spacing: 0.8px;
     background-color: #f2f48b;
-    font-size: x-large;
-    padding: 10px;
+    font-size: 1.8rem;
+    /* padding: 10px; */
     font-weight: bolder;
+    margin-bottom: 20px;
 }
-#input{
-    margin-top: 10px;
-    margin-bottom: 15px;
-    height: 7rem;
-    border-radius: 5px;
-    border: none;
-    border: 1px solid;
+textarea {
     width: 300px;
+    height: 100px;
+    font-size: 18px;
+    font-family: "Nunito", sans-serif;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid slategray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 p{
-    /* margin-top: 20px; */
+    margin-top: 20px;
     font-size: 1.5rem;
+    font-family: "Nunito", sans-serif;
     text-align: center;
     display: inline;
     /* border: 2px solid; */
 }
 
 p span{
+    background-color: #feffc1;
     font-weight: bolder;
 } 

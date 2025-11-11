@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- All 19 types of fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Delius&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Funnel+Display:wght@300..800&family=Grenze+Gotisch:wght@100..900&family=Lexend+Deca:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Limelight&family=Macondo&family=Mea+Culpa&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata&family=Quintessential&family=Shadows+Into+Light+Two&family=Stack+Sans+Headline:wght@200..700&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <div class="container">
         <span class="main-heading">Real-Time Character Counter</span>
-        <input type="text" id="input" placeholder="Type something...">
-        <p>Character Count: <span>0/50</span></p>
+        <textarea name="input-text" id="text-input" placeholder="Type something ..."></textarea>
+        <p id="char-count">Character Count: <span>0/50</span></p>
     </div>
 
     <script src="script.js"></script>
