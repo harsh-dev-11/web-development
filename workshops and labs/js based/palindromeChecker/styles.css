@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #313647 0%, #1a1f2e 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+}
+
+.container {
+    background: linear-gradient(to bottom, #FFF8D4, #FFF5B0);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+}
+
+input {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 8px;
+    border: 2px solid #d4c5a9;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* resize: vertical; */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fefdfb;
+    color: #2c3e50;
+}
+
+input:focus {
+    outline: none;
+    border-color: #435663;
+    box-shadow: 0 0 0 3px rgba(67, 86, 99, 0.1);
+}
+
+input::placeholder {
+    color: #a0917f;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    justify-content: center;
+}
+
+#check-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #435663 0%, #364452 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(67, 86, 99, 0.3);
+    flex: 1;
+    min-width: 120px;
+}
+
+#clearButton {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #e8947e 0%, #d97a5f 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(217, 122, 95, 0.3);
+    flex: 1;
+    min-width: 120px;
+}
+
+#check-btn:hover {
+    background: linear-gradient(135deg, #5a7a91 0%, #435663 100%);
+    box-shadow: 0 6px 20px rgba(67, 86, 99, 0.4);
+    transform: translateY(-2px);
+}
+
+#check-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(67, 86, 99, 0.3);
+}
+
+#clearButton:hover {
+    background: linear-gradient(135deg, #f0a891 0%, #e57e5f 100%);
+    box-shadow: 0 6px 20px rgba(217, 122, 95, 0.4);
+    transform: translateY(-2px);
+}
+
+#clearButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(217, 122, 95, 0.3);
+}
+
+#result {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    min-height: 24px;
+}
