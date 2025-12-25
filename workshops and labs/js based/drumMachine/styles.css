@@ -1,0 +1,27 @@
+body{
+    background-color: #213448;
+}
+#drum-machine{
+    background-color: #547792;
+    min-height: 200px;
+    min-width: 200px;
+    height: 40vh;
+    width: 40vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pad-bank{
+    border: 2px solid;
+    width: 90%;
+    height: 90%;
+    display: grid;
+}
+.drum-pad{
+    height: 2rem;
+    min-width: 2rem;
+    border: 1px solid;
+    margin: 5px;
+    background-color: #EAE0CF;
+}
