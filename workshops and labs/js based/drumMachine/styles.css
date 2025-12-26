@@ -1,27 +1,75 @@
-body{
-    background-color: #213448;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#drum-machine{
-    background-color: #547792;
-    min-height: 200px;
-    min-width: 200px;
+body {
+    background-color: #c6f2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#drum-machine {
+    background-color: #2a658187;
+    padding: 10px;
+    min-height: 300px;
+    min-width: 300px;
     height: 40vh;
     width: 40vh;
     margin: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-items: center;
 }
-#pad-bank{
-    border: 2px solid;
+
+#pad-bank {
     width: 90%;
     height: 90%;
+    padding: 10px;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
 }
-.drum-pad{
-    height: 2rem;
-    min-width: 2rem;
+
+.drum-pad {
     border: 1px solid;
-    margin: 5px;
-    background-color: #EAE0CF;
+    border-radius: 3px;
+    background-color: #ffda56;
+    font-size: 1.8rem;
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    cursor:pointer;
+}
+
+.drum-pad:hover {
+    background-color: #f1c937;
+    transition: 0.9s ease;
+}
+
+.drum-pad:active {
+    scale: 0.9;
+    transition: 0.1s ease;
+}
+
+#display{
+    color: rgb(0, 0, 0);
+    background-color: #efff97;
+    height: 2rem;
+    width: 120px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+    font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
