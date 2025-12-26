@@ -14,6 +14,7 @@ body {
 
 #drum-machine {
     background-color: #2a658187;
+    border-radius: 8px;
     padding: 10px;
     min-height: 300px;
     min-width: 300px;
@@ -37,7 +38,7 @@ body {
 
 .drum-pad {
     border: 1px solid;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: #ffda56;
     font-size: 1.8rem;
     font-family: "Audiowide", sans-serif;
@@ -47,16 +48,6 @@ body {
     align-items: center;
     justify-content: center; 
     cursor:pointer;
-}
-
-.drum-pad:hover {
-    background-color: #f1c937;
-    transition: 0.9s ease;
-}
-
-.drum-pad:active {
-    scale: 0.9;
-    transition: 0.1s ease;
 }
 
 #display{
@@ -70,6 +61,6 @@ body {
     align-items: center;
     cursor: default;
     font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-optical-sizing: auto;    
+    font-style: normal;
 }

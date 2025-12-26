@@ -1,6 +1,5 @@
 const allKeys = document.querySelectorAll(".drum-pad");
 const displayElement = document.getElementById("display");
-const audio = new Audio();
 const sounds = [
   {
     id: "Q",
@@ -49,37 +48,43 @@ const sounds = [
   },
 ];
 
-function playSound(id) {
-  let src;
-  let title;
+function playSound(id, audio) {
+  // setting up the audio element
+  const audioElement = audio;
   sounds.forEach((sound) => {
     if (sound.id === id) {
-      src = sound.src;
-      title = sound.title;
+      audioElement.src = sound.src;
+      audioElement.title = sound.title;
     }
   });
-  if (src) {
-    audio.src = src;
-    displayElement.textContent = title;
-    audio.play();
-  } else {
-    console.log("Sound not found!!");
-    return;
-  }
+  displayElement.textContent = audio.title;
+  audioElement.play();
 }
 
+// clicking event
 allKeys.forEach((key) => {
   key.addEventListener("click", () => {
-    playSound(key.querySelector("audio").id);
+    const id = key.id.replace("key-", "");
+    const audio = document.getElementById(id);
+    playSound(id, audio);
+    keyPressedStyle(id);
   });
 });
 
-// To do: Key listener functionality
-window.addEventListener("keydown", (event) => {
-  let key = event.key.toUpperCase();
-  let sound = sounds.forEach((sound) => {
-    sound.id === key;
-  });
-  //   playSound(sound.id);
-  console.log(sound);
+// key-press event
+document.addEventListener("keydown", (event) => {
+  let id = event.key.toUpperCase();
+  const audio = document.getElementById(id);
+  playSound(id, audio);
+  keyPressedStyle(id);
 });
+
+function keyPressedStyle(id) {
+  let key = document.getElementById(`key-${id}`);
+  if (!key) return;
+  key.style.transition = "0.05s";
+  key.style.transform = "scale(0.97)";
+  setTimeout(() => {
+    key.style.transform = "scale(1)";
+  }, 100);
+}
