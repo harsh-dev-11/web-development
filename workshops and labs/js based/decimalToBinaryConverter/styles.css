@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-grey: #111820;
+  --dark-blue: #1b1b32;
+  --orange: #acd0ff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
+    monospace;
+  font-size: 1.125rem;
+  color: var(--light-grey);
+  background: linear-gradient(90deg, #2D5888 0%, #4F99EE 100%);
+  padding: 0 4px;
+}
+
+main{
+    border-radius: 31px;
+background: linear-gradient(180deg, rgba(236, 243, 255, 0.20) 0%, rgba(81, 99, 128, 0.20) 100%);
+padding: 20px;
+}
+
+h1 {
+  color: #0B3261;
+text-align: center;
+font-family: Orbitron;
+font-size: 50px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: clamp(320px, 50vw, 460px);
+  margin: 10px auto;
+}
+
+.input-container label {
+  white-space: nowrap;
+  word-spacing: -6px;
+}
+
+.convert-btn {
+  font-size: inherit;
+  font-family: inherit;
+  display: flex;
+padding: 0 22px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 27px;
+background: linear-gradient(0deg, #52A1C0 0%, #8CDEFF 100%);
+  width: 100%;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.number-input {
+  font-size: inherit;
+  padding: 0.3rem;
+  width: 100%;
+}
+
+.output-container {
+  margin-inline: auto;
+  width: clamp(320px, 50vw, 460px);
+}
+
+#result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  text-align: center;
+  min-height: 80px;
+  margin-block-start: 20px;
+  padding: 15px;
+  border: 2px solid var(--orange);
+  border-radius: 2px;
+}
+
+#animation-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: end;
+  gap: 1rem;
+  margin-block-end: 1rem;
+  min-height: 40vh;
+  border: 2px dashed var(--orange);
+  padding: 1rem;
+}
+
+.animation-frame {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+  padding: 15px 10px;
+  border: 5px solid var(--orange);
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 36em) {
+  body {
+    font-size: 1rem;
+  }
+
+  .input-container {
+    flex-direction: row;
+    width: unset;
+  }
+
+  .number-input {
+    width: unset;
+  }
+}
