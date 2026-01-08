@@ -2,19 +2,18 @@
 
 Welcome to the core web workspace.
 
-Full Stack development journey with projects
----
+## Full Stack development journey with projects
 
-##  What's Inside?
+## What's Inside?
 
 structured modules and practice work across the following technologies:
 
--  **HTML** 
--  **CSS** 
--  **JavaScript -in progress** 
+- **HTML**
+- **CSS**
+- **JavaScript -in progress**
 <!-- -  **Front-end Libraries** *(upcoming)*
--  **Python for Web** *(upcoming)*
--  **Relational Databases (MySQL, PostgreSQL)** *(upcoming)* -->
+- **Python for Web** _(upcoming)_
+- **Relational Databases (MySQL, PostgreSQL)** _(upcoming)_ -->
 <!-- -  **Backend with JavaScript (Node.js, Express.js)** *(upcoming)* -->
 
 > **Note:** This repository is actively growing — updates and new content are frequent.
@@ -27,6 +26,9 @@ structured modules and practice work across the following technologies:
 web-development/
 ├── HTML/
 ├── CSS/
-├── Projects/
+├── JavaScript/
+├── node_modules/
+├── workshops and labs/
 ├── docs/
 └── README.md
+```
