@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Krona+One&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="weather-container">
+
+    <div class="top-section">
+      <h1 id="location"></h1>
+      <div class="temperature-cloud">
+        <div id="main-temperature"><span></span> &deg;C</div>
+        <div class="weather">
+          <img id="weather-icon" src="weather-raining.png" alt="weather-icon">
+          <p id="weather-main"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-section">
+      <div class="humidity-feelsLike">
+        <div id="humidity">Humidity: <span id="humidity-span"></span>%</div>
+        <div id="feels-like">Feels Like: <span id="feels-like-span"></span> &deg;C</div>
+      </div>
+      <div class="wind-and-direction">
+        <div class="wind-gust">
+          <div id="wind">Wind: <span id="wind-span"></span>m/s</div>
+          <div id="wind-gust">Gusts: <span id="wind-gust-span"></span></div>
+        </div>
+        <div class="directiveElipse"><img id="wind-direction-img" src="wind-direction.png" alt=""></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="user-selection">
+    <p>Weather For: </p>
+    <select name="" id="select-menu">
+      <option value=""></option>
+      <option value="new york">New York</option>
+      <option value="los angeles">Los Angeles</option>
+      <option value="chicago">Chicago</option>
+      <option value="paris">Paris</option>
+      <option value="tokyo">Tokyo</option>
+      <option value="london">London</option>
+    </select>
+    <button id="get-weather-btn">Get Weather</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
