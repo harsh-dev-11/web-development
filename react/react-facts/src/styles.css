@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  /* padding: 20px; */
+  font-family: "Inter", sans-serif;
+  background: #27292c;
+  color: white;
+  width: 50vw;
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 30px;
+  height: 90vh;
+}
+
+main {
+  padding: 40px 30px;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.react-logo {
+  width: 2rem;
+}
+.react-logo-back {
+  width: 9rem;
+  transform: rotate(7deg);
+  aspect-ratio: 1/1;
+  background: url("../public/React.png") lightgray 50% / cover no-repeat;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.react-facts-text {
+  color: #60dbfb;
+  font-size: 1.7rem;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin-left: 10px;
+}
+
+.list-items > li {
+  margin-left: 40px;
+  margin-bottom: 10px;
+  line-height: 19px;
+}
+
+.list-items > li::marker {
+  color: #60dbfb;
+  font-size: 1.5rem;
+}
+
+main {
+  background-image: url(../public/React-logo-half.png);
+  background-repeat: no-repeat;
+  background-size: 100px;
+  background-position: right 65%;
+}
