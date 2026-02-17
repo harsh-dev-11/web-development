@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 50vw;
+  margin: 0 auto 0 auto;
+  height: 100vh;
+  border: 3px solid green;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f55a5a;
+}
+
+img {
+  width: 50px;
+}
