@@ -22,6 +22,10 @@ function App() {
   };
 
   const convert = () => {
+    if (to === from) {
+      alert("invalid conversion!");
+      return;
+    }
     setConvertedAmount(amount * currencyInfo[to]);
     console.log(currencyInfo);
   };
@@ -46,7 +50,7 @@ function App() {
                 label="From"
                 amount={amount}
                 onAmountChange={(currency) => setAmount(currency)}
-                onCurrencyChange={(currency) => setAmount(amount)}
+                onCurrencyChange={(currency) => setFrom(currency)}
                 currencyOptions={options}
                 selectCurrency={from}
                 // amountDisable
@@ -67,7 +71,7 @@ function App() {
                 amount={convertedAmount}
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
-                selectCurrency={from}
+                selectCurrency={to}
                 amountDisable
               />
             </div>
