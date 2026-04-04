@@ -27,7 +27,10 @@ structured modules and practice work across the following technologies:
 web-development/
 ├── HTML/
 ├── CSS/
+├── JavaScript/
+├── react/
 ├── Projects/
+├── workshops and labs/
 ├── docs/
 └── README.md
 ```
