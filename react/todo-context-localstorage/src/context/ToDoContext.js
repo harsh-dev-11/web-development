@@ -1,5 +1,6 @@
 import { createContext, useContext } from "react";
 
+// creating global data container
 export const ToDoContext = createContext({
     todo: [
         {
