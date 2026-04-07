@@ -13,7 +13,7 @@ function Github() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white shadow-xl rounded-2xl p-6 w-[350px] text-center hover:shadow-2xl transition-shadow duration-300">
+      <div className="bg-white shadow-xl rounded-2xl p-6 w-87.5 text-center hover:shadow-2xl transition-shadow duration-300">
         {/* Avatar */}
         <img
           src={data.avatar_url}

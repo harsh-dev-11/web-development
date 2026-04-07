@@ -14,6 +14,7 @@ import Contact from "./components/Contact/Contact";
 import User from "./components/User/User";
 import Github, { githubInfoLoader } from "./components/Github/Github";
 
+// routing configuration
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
   ),
 );
 
+// the new way to create routing configuration
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
